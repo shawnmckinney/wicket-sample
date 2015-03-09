@@ -1,0 +1,58 @@
+#
+# This is free and unencumbered software released into the public domain.
+#
+
+# This param tells fortress what type of ldap server in use:
+ldap.server.type=apacheds
+
+# Use value from [Set Hostname Entry]:
+host=fortressdemo2.com
+
+# if ApacheDS is listening on TLS port:
+port=10636
+
+# These credentials are used for read/write access to all nodes under suffix:
+admin.user=uid=admin,ou=system
+admin.pw=secret
+
+# Use truststore genned [Managing PKI Keys] or found under /src/test/resources in apache-fortress-demo source package.
+trust.store=/home/smckinn/fortress/apache-fortress-demo-master/src/test/resources/mytruststore
+trust.store.password=changeit
+
+# This is min/max settings for LDAP administrator pool connections that have read/write access to all nodes under suffix:
+min.admin.conn=1
+max.admin.conn=10
+
+# Used for SSL Connection to LDAP Server:
+enable.ldap.ssl=true
+enable.ldap.ssl.debug=false
+
+# Sets trust.store params as System.property to be used by JDBC driver:
+trust.store.set.prop=true
+
+# These are the JDBC configuration params for MyBatis DAO connect to MySQL database example:
+database.driver=com.mysql.jdbc.Driver
+database.url=jdbc:mysql://fortressdemo2.com:3306/demoDB?useSSL=true&requireSSL=true
+database.username=admin
+database.password=secret
+
+# This node contains fortress properties stored on behalf of connecting LDAP clients:
+config.realm=DEFAULT
+config.root=ou=Config,dc=example,dc=com
+
+# Used by application security components:
+perms.cached=true
+
+# Fortress uses a cache:
+ehcache.config.file=ehcache.xml
+
+# Default for pool reconnect flag is false:
+enable.pool.reconnect=true
+
+# Used when connecting with Fortress Rest instead of LDAP:
+#enable.mgr.impl.rest=true
+# If using EnMasse, these parameters needed:
+#http.user=demouser4
+#http.pw=gX9JbCTxJW5RiH+otQEX0Ja0RIAoPBQf
+#http.host=localhost
+#http.port=8080
