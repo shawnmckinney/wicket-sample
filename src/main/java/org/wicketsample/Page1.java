@@ -1,14 +1,13 @@
 /*
  * This is free and unencumbered software released into the public domain.
  */
-package com.mycompany;
+package org.wicketsample;
 
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import com.googlecode.wicket.jquery.ui.form.button.IndicatingAjaxButton;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
-import org.apache.directory.fortress.web.SecureIndicatingAjaxButton;
 
 public class Page1 extends MyBasePage
 {
@@ -21,7 +20,7 @@ public class Page1 extends MyBasePage
     public class Page1Form extends Form
     {
 
-        private static final String PAGE1 = "com.mycompany.Page1";
+        private static final String PAGE1 = "Page1";
 
         public Page1Form( String id )
         {

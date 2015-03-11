@@ -6,35 +6,18 @@
 ldap.server.type=apacheds
 
 # Use value from [Set Hostname Entry]:
-host=fortressdemo2.com
+host=localhost
 
 # if ApacheDS is listening on TLS port:
-port=10636
+port=10389
 
 # These credentials are used for read/write access to all nodes under suffix:
 admin.user=uid=admin,ou=system
 admin.pw=secret
 
-# Use truststore genned [Managing PKI Keys] or found under /src/test/resources in apache-fortress-demo source package.
-trust.store=/home/smckinn/fortress/apache-fortress-demo-master/src/test/resources/mytruststore
-trust.store.password=changeit
-
 # This is min/max settings for LDAP administrator pool connections that have read/write access to all nodes under suffix:
 min.admin.conn=1
 max.admin.conn=10
-
-# Used for SSL Connection to LDAP Server:
-enable.ldap.ssl=true
-enable.ldap.ssl.debug=false
-
-# Sets trust.store params as System.property to be used by JDBC driver:
-trust.store.set.prop=true
-
-# These are the JDBC configuration params for MyBatis DAO connect to MySQL database example:
-database.driver=com.mysql.jdbc.Driver
-database.url=jdbc:mysql://fortressdemo2.com:3306/demoDB?useSSL=true&requireSSL=true
-database.username=admin
-database.password=secret
 
 # This node contains fortress properties stored on behalf of connecting LDAP clients:
 config.realm=DEFAULT
