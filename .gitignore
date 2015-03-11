@@ -2,9 +2,9 @@ target
 .project
 .classpath
 .settings
-.properties
 .idea
 eclipse-classes
+*.properties
 *.log
 *.iml
 *.ipr
