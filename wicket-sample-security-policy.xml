@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2009-2013. Joshua Tree Software, LLC.  All Rights Reserved.
+  -->
+<project basedir="." default="all" name="Apache Fortress Policy">
+
+    <taskdef classname="org.apache.directory.fortress.core.ant.FortressAntTask" name="FortressAdmin" >
+        <classpath path="${java.class.path}"/>
+    </taskdef>
+
+
+    <target name="all">
+        <FortressAdmin>
+
+            <deluser>
+                <user userId="wssuperuser"/>
+                <user userId="wsuser1"/>
+                <user userId="wsuser2"/>
+                <user userId="wsuser3"/>
+            </deluser>
+
+            <adduser>
+                <user userId="wssuperuser" password="password" description="Wicket Sample Demo Super User" ou="u1" />
+                <user userId="wsuser1" password="password" description="Wicket Sample User 1" ou="u1" />
+                <user userId="wsuser2" password="password" description="Wicket Sample User 2" ou="u1" />
+                <user userId="wsuser3" password="password" description="Wicket Sample User 3" ou="u1" />
+            </adduser>
+
+            <deluserrole>
+                <userrole userId="wsuser1" name="wsusers1role" />
+                <userrole userId="wsuser2" name="wsusers2role" />
+                <userrole userId="wsuser3" name="wsusers3role" />
+                <userrole userId="wssuperuser" name="wssuperrole" />
+            </deluserrole>
+
+            <adduserrole>
+                <userrole userId="wsuser1" name="wsusers1role" />
+                <userrole userId="wsuser2" name="wsusers2role" />
+                <userrole userId="wsuser3" name="wsusers3role" />
+                <userrole userId="wssuperuser" name="wssuperrole" />
+            </adduserrole>
+
+            <delrole>
+                <role name="wsBaseRole" />
+                <role name="wsUsers1Role" />
+                <role name="wsUsers2Role" />
+                <role name="wsUsers3Role" />
+                <role name="wsSuperRole" />
+            </delrole>
+
+            <addrole>
+                <role name="wsBaseRole" description="Base Role gets you into the sample web app"/>
+                <role name="wsUsers1Role" description="Grants access to page 1 and components"/>
+                <role name="wsUsers2Role" description="Grants access to page 2 and components"/>
+                <role name="wsUsers3Role" description="Grants access to page 3 and components"/>
+                <role name="wsSuperRole" description="Inherits from the page roles, grants user to all pages, components in app"/>
+            </addrole>
+
+            <delroleinheritance>
+                <relationship child="wsUsers1Role" parent="wsBaseRole"/>
+                <relationship child="wsUsers2Role" parent="wsBaseRole"/>
+                <relationship child="wsUsers3Role" parent="wsBaseRole"/>
+                <relationship child="wsSuperRole" parent="wsUsers1Role"/>
+                <relationship child="wsSuperRole" parent="wsUsers2Role"/>
+                <relationship child="wsSuperRole" parent="wsUsers3Role"/>
+            </delroleinheritance>
+
+            <addroleinheritance>
+                <relationship child="wsUsers1Role" parent="wsBaseRole"/>
+                <relationship child="wsUsers2Role" parent="wsBaseRole"/>
+                <relationship child="wsUsers3Role" parent="wsBaseRole"/>
+                <relationship child="wsSuperRole" parent="wsUsers1Role"/>
+                <relationship child="wsSuperRole" parent="wsUsers2Role"/>
+                <relationship child="wsSuperRole" parent="wsUsers3Role"/>
+            </addroleinheritance>
+
+            <delpermobj>
+                <permobj objName="org.wicketsample.Page1" />
+                <permobj objName="org.wicketsample.Page2" />
+                <permobj objName="org.wicketsample.Page3" />
+            </delpermobj>
+
+            <addpermobj>
+                <permobj objName="org.wicketsample.Page1" description="Wicket Sample Test Page 1" ou="p1" />
+                <permobj objName="org.wicketsample.Page2" description="Wicket Sample Test Page 2" ou="p1" />
+                <permobj objName="org.wicketsample.Page3" description="Wicket Sample Test Page 3" ou="p1" />
+            </addpermobj>
+
+            <delpermop>
+                <permop objName="org.wicketsample.Page1" opName="Button1"/>
+                <permop objName="org.wicketsample.Page1" opName="Button2"/>
+                <permop objName="org.wicketsample.Page1" opName="Button3"/>
+                <permop objName="org.wicketsample.Page2" opName="Button1"/>
+                <permop objName="org.wicketsample.Page2" opName="Button2"/>
+                <permop objName="org.wicketsample.Page2" opName="Button3"/>
+                <permop objName="org.wicketsample.Page3" opName="Button1"/>
+                <permop objName="org.wicketsample.Page3" opName="Button2"/>
+                <permop objName="org.wicketsample.Page3" opName="Button3"/>
+            </delpermop>
+
+            <addpermop>
+                <permop objName="org.wicketsample.Page1" opName="Button1" type="Button"/>
+                <permop objName="org.wicketsample.Page1" opName="Button2" type="Button"/>
+                <permop objName="org.wicketsample.Page1" opName="Button3" type="Button"/>
+                <permop objName="org.wicketsample.Page2" opName="Button1" type="Button"/>
+                <permop objName="org.wicketsample.Page2" opName="Button2" type="Button"/>
+                <permop objName="org.wicketsample.Page2" opName="Button3" type="Button"/>
+                <permop objName="org.wicketsample.Page3" opName="Button1" type="Button"/>
+                <permop objName="org.wicketsample.Page3" opName="Button2" type="Button"/>
+                <permop objName="org.wicketsample.Page3" opName="Button3" type="Button"/>
+            </addpermop>
+
+            <delpermgrant>
+                <permgrant objName="org.wicketsample.Page1" opName="Button1" roleNm="wsUsers1Role"/>
+                <permgrant objName="org.wicketsample.Page1" opName="Button2" roleNm="wsUsers1Role"/>
+                <permgrant objName="org.wicketsample.Page1" opName="Button3" roleNm="wsUsers1Role"/>
+                <permgrant objName="org.wicketsample.Page2" opName="Button1" roleNm="wsUsers2Role"/>
+                <permgrant objName="org.wicketsample.Page2" opName="Button2" roleNm="wsUsers2Role"/>
+                <permgrant objName="org.wicketsample.Page2" opName="Button3" roleNm="wsUsers2Role"/>
+                <permgrant objName="org.wicketsample.Page3" opName="Button1" roleNm="wsUsers3Role"/>
+                <permgrant objName="org.wicketsample.Page3" opName="Button2" roleNm="wsUsers3Role"/>
+                <permgrant objName="org.wicketsample.Page3" opName="Button3" roleNm="wsUsers3Role"/>
+            </delpermgrant>
+
+            <addpermgrant>
+                <permgrant objName="org.wicketsample.Page1" opName="Button1" roleNm="wsUsers1Role"/>
+                <permgrant objName="org.wicketsample.Page1" opName="Button2" roleNm="wsUsers1Role"/>
+                <permgrant objName="org.wicketsample.Page1" opName="Button3" roleNm="wsUsers1Role"/>
+                <permgrant objName="org.wicketsample.Page2" opName="Button1" roleNm="wsUsers2Role"/>
+                <permgrant objName="org.wicketsample.Page2" opName="Button2" roleNm="wsUsers2Role"/>
+                <permgrant objName="org.wicketsample.Page2" opName="Button3" roleNm="wsUsers2Role"/>
+                <permgrant objName="org.wicketsample.Page3" opName="Button1" roleNm="wsUsers3Role"/>
+                <permgrant objName="org.wicketsample.Page3" opName="Button2" roleNm="wsUsers3Role"/>
+                <permgrant objName="org.wicketsample.Page3" opName="Button3" roleNm="wsUsers3Role"/>
+            </addpermgrant>
+
+            <delorgunit>
+                <orgunit name="p1" typeName="PERM"/>
+                <orgunit name="u1" typeName="USER"/>
+            </delorgunit>
+
+            <addorgunit>
+                <orgunit name="p1" typeName="PERM" description="Used for Test Permissions"/>
+                <orgunit name="u1" typeName="USER" description="Used for Test Users"/>
+            </addorgunit>
+
+        </FortressAdmin>
+    </target>
+</project>
