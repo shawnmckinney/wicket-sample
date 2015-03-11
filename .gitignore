@@ -2,6 +2,7 @@ target
 .project
 .classpath
 .settings
+.properties
 .idea
 eclipse-classes
 *.log
