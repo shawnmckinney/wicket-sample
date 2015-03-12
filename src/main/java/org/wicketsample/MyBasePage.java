@@ -10,7 +10,7 @@ import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.link.Link;
 
 /**
- * Base class for MyFortressProject.
+ * Base class for wicketsample project.
  *
  * @author Shawn McKinney
  * @version $Rev$

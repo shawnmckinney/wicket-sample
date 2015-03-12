@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 
 /**
+ * The Wicket Sample web app routes all users to this page after logon.
+ *
  * @author Shawn McKinney
  * @version $Rev$
  */

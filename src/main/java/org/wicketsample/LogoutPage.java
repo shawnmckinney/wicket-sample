@@ -10,6 +10,9 @@ import org.apache.wicket.markup.html.basic.Label;
 import javax.servlet.http.HttpServletRequest;
 
 /**
+ * The Wicket Sample web app will route user's to this page for logout.
+ * Although this page is important for page flow with regard to security, isn't itself secured by fortress or javaEE.
+ *
  * @author Shawn McKinney
  * @version $Rev$
  */

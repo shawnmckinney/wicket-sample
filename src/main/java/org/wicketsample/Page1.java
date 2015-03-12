@@ -10,6 +10,12 @@ import com.googlecode.wicket.jquery.ui.form.button.IndicatingAjaxButton;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 
+/**
+ * Wicket Sample Page 1
+ *
+ * @author Shawn McKinney
+ * @version $Rev$
+ */
 public class Page1 extends MyBasePage
 {
     private static final Logger LOG = Logger.getLogger( MyBasePage.class.getName() );
@@ -19,6 +25,9 @@ public class Page1 extends MyBasePage
         add( new Page1Form( "pageForm" ) );
     }
 
+    /**
+     * Page 1 Form
+     */
     public class Page1Form extends Form
     {
         public Page1Form( String id )

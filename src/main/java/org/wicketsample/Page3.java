@@ -10,6 +10,12 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 
 
+/**
+ * Wicket Sample Page 3
+ *
+ * @author Shawn McKinney
+ * @version $Rev$
+ */
 public class Page3 extends MyBasePage
 {
     public Page3()
@@ -17,6 +23,9 @@ public class Page3 extends MyBasePage
         add( new Page3Form( "pageForm" ) );
     }
 
+    /**
+     * Page 3 Form
+     */
     public class Page3Form extends Form
     {
         public Page3Form( String id )
