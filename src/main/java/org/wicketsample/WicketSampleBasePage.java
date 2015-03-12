@@ -44,8 +44,8 @@ public abstract class WicketSampleBasePage extends WebPage
 */
         // TODO STEP 8b: change to FtBookmarkablePageLink:
         add( new BookmarkablePageLink( "page1.link", Page1.class ) );
-        add( new BookmarkablePageLink( "page2.link", Page1.class ) );
-        add( new BookmarkablePageLink( "page3.link", Page1.class ) );
+        add( new BookmarkablePageLink( "page2.link", Page2.class ) );
+        add( new BookmarkablePageLink( "page3.link", Page3.class ) );
         final Link actionLink = new Link( "logout.link" )
         {
             @Override
