@@ -24,7 +24,7 @@
 
 
     <dependencies>
-        <!-- TODO: uncomment for fortress security: -->
+        <!-- TODO: uncomment for fortress & security dependencies: -->
 <!--
         <dependency>
             <groupId>org.apache.directory</groupId>

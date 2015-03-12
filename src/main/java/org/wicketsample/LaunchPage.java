@@ -20,8 +20,7 @@ public class LaunchPage extends MyBasePage
     public LaunchPage()
     {
 /*
-        TODO: needed for fortrtess logon:
-
+        TODO: uncomment to enable Java EE logon/logoff page flow:s
         HttpServletRequest servletReq = (HttpServletRequest)getRequest().getContainerRequest();
         Principal principal = servletReq.getUserPrincipal();
         // needed anytime container security checker allows requests in with old cookie (perhaps after server/app restart)::

@@ -8,7 +8,7 @@
 
     <display-name>myproject</display-name>
 
-<!-- TODO: needed for fortress spring bean injection: -->
+<!-- TODO: uncomment to enable fortress spring bean injection: -->
 <!--
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -37,7 +37,7 @@
         <dispatcher>INCLUDE</dispatcher>
     </filter-mapping>
 
-    <!-- TODO: needed for Java EE Security config: -->
+    <!-- TODO: uncomment to enable Java EE Security: -->
 <!--
     <security-constraint>
         <web-resource-collection>
