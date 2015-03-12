@@ -41,7 +41,7 @@ public abstract class MyBasePage extends WebPage
                 HttpServletRequest servletReq = ( HttpServletRequest ) getRequest().getContainerRequest();
                 servletReq.getSession().invalidate();
                 getSession().invalidate();
-                setResponsePage(LoginPage.class);
+                setResponsePage(LogoutPage.class);
             }
         };
         add( actionLink );
