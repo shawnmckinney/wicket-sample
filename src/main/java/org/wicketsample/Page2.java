@@ -19,14 +19,11 @@ public class Page2 extends MyBasePage
 
     public class Page2Form extends Form
     {
-        private static final String PAGE2 = "Page2";
-
         public Page2Form( String id )
         {
             super( id );
 
-            add( new Label( "label2", "This is Page2.  If you see it, ROLE_TEST1 &/or ROLE_TEST2 is activated within " +
-                "" + "your session" ) );
+            add( new Label( "label2", "This is Page2" ) );
             add( new IndicatingAjaxButton( "page2.button1" )
             //add( new FtIndicatingAjaxButton( "page2.button1" )
             {
