@@ -10,6 +10,8 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.link.Link;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Base class for wicketsample project.
  *
@@ -30,16 +32,24 @@ public abstract class WicketSampleBasePage extends WebPage
 
     public WicketSampleBasePage()
     {
+/*
         // TODO: uncomment to startup fortress session:
-        //SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr, accessMgr );
+        try
+        {
+            SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr,
+                accessMgr );
+        }
+        catch (SecurityException se)
+        {
+            String error = "WicketSampleBasePage caught security exception : " + se;
+            LOG.warn( error );
+        }
+*/
 
         // TODO: change to FtBookmarkablePageLink:
-        BookmarkablePageLink page1Link = new BookmarkablePageLink( "page1.link", Page1.class );
-        add( page1Link );
-        BookmarkablePageLink page2Link = new BookmarkablePageLink( "page2.link", Page2.class );
-        add( page2Link );
-        BookmarkablePageLink page3Link = new BookmarkablePageLink( "page3.link", Page3.class );
-        add( page3Link );
+        add( new BookmarkablePageLink( "page1.link", Page1.class ) );
+        add( new BookmarkablePageLink( "page2.link", Page1.class ) );
+        add( new BookmarkablePageLink( "page3.link", Page1.class ) );
         final Link actionLink = new Link( "logout.link" )
         {
             @Override

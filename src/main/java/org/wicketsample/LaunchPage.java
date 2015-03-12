@@ -22,13 +22,9 @@ public class LaunchPage extends WicketSampleBasePage
         // TODO: uncomment to enable Java EE logon/logoff page flow:s
         HttpServletRequest servletReq = (HttpServletRequest)getRequest().getContainerRequest();
         Principal principal = servletReq.getUserPrincipal();
-        // needed anytime container security checker allows requests in with old cookie (perhaps after server/app restart)::
         if(principal == null)
         {
             LOG.info( "user not logged in, route to login page instead" );
-            // invalidate the session and force the user to log back on:
-            servletReq.getSession().invalidate();
-            getSession().invalidate();
             setResponsePage( LogoutPage.class );
         }
 */
