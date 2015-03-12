@@ -8,18 +8,6 @@
 
     <display-name>myproject</display-name>
 
-<!-- TODO: uncomment to enable fortress spring bean injection: -->
-<!--
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:applicationContext.xml</param-value>
-    </context-param>
-
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
--->
-
     <filter>
         <filter-name>wicket.myproject</filter-name>
         <filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
@@ -37,8 +25,19 @@
         <dispatcher>INCLUDE</dispatcher>
     </filter-mapping>
 
-    <!-- TODO: uncomment to enable Java EE Security: -->
+
+    <!-- TODO: uncomment to enable fortress spring bean injection: -->
 <!--
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    &lt;!&ndash; TODO: uncomment to enable Java EE Security: &ndash;&gt;
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>app</web-resource-name>
