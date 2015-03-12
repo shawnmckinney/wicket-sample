@@ -18,7 +18,7 @@ import org.apache.wicket.markup.html.link.Link;
 public abstract class MyBasePage extends WebPage
 {
 /*
-    // TODO: needed for fortress spring bean injection:
+    // TODO: uncomment for fortress spring bean injection:
     @SpringBean
     private AccessMgr accessMgr;
     @SpringBean
@@ -49,7 +49,7 @@ public abstract class MyBasePage extends WebPage
         add( actionLink );
         add( new Label( "footer", "This is free and unencumbered software released into the public domain." ) );
 
-        // TODO: enable fortress by uncommenting this line:
+        // TODO: uncomment to enable fortress startup:
         //SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr, accessMgr );
     }
 }

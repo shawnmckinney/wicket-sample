@@ -24,7 +24,6 @@ public class Page3 extends MyBasePage
             super( id );
             add( new Label( "label3", "This is Page3." ) );
             add( new IndicatingAjaxButton( "page3.button1" )
-            //add( new FtIndicatingAjaxButton( "page3.button1" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
@@ -34,7 +33,6 @@ public class Page3 extends MyBasePage
                 }
             } );
             add( new IndicatingAjaxButton( "page3.button2" )
-            //add( new FtIndicatingAjaxButton( "page3.button2" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
@@ -44,7 +42,6 @@ public class Page3 extends MyBasePage
                 }
             } );
             add( new IndicatingAjaxButton( "page3.button3" )
-            //add( new FtIndicatingAjaxButton( "page3.button3" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )

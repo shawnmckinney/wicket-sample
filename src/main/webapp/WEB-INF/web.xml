@@ -8,8 +8,8 @@
 
     <display-name>myproject</display-name>
 
-    <!-- SPRING config: -->
-<!-- TODO: needed for fortress spring bean injection:
+<!-- TODO: needed for fortress spring bean injection: -->
+<!--
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
@@ -18,7 +18,6 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-
 -->
 
     <filter>
@@ -38,7 +37,7 @@
         <dispatcher>INCLUDE</dispatcher>
     </filter-mapping>
 
-    <!-- #### Begin Wicket Sample Security config: #### -->
+    <!-- TODO: needed for Java EE Security config: -->
 <!--
     <security-constraint>
         <web-resource-collection>

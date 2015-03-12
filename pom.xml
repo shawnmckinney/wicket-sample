@@ -24,8 +24,7 @@
 
 
     <dependencies>
-        <!--  FORTRESS Web DEPENDENCIES pulls in core, realm and web components -->
-
+        <!-- TODO: uncomment for fortress security: -->
 <!--
         <dependency>
             <groupId>org.apache.directory</groupId>
@@ -39,6 +38,7 @@
             <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
@@ -50,7 +50,6 @@
             <artifactId>xml-apis</artifactId>
             <version>1.4.01</version>
         </dependency>
-
 -->
 
         <dependency>
