@@ -35,16 +35,6 @@ public class WicketApplication extends WebApplication
 		return new WicketSession(request);
 	}
 */
-
-	/**
-	 * @see org.apache.wicket.Application#getHomePage()
-	 */
-	@Override
-	public Class<? extends WebPage> getHomePage()
-	{
-		return LaunchPage.class;
-	}
-
 	/**
 	 * @see org.apache.wicket.Application#init()
 	 */
@@ -52,6 +42,7 @@ public class WicketApplication extends WebApplication
 	public void init()
 	{
 		super.init();
+
 		// TODO: uncomment to enable injection of fortress spring beans:
 		//getComponentInstantiationListeners().add(new SpringComponentInjector(this));
 
@@ -64,7 +55,15 @@ public class WicketApplication extends WebApplication
 				return new RenderPageRequestHandler( new PageProvider( new ErrorPage( e ) ) );
 			}
 		} );
-
 		getMarkupSettings().setStripWicketTags(true);
+	}
+
+	/**
+	 * @see org.apache.wicket.Application#getHomePage()
+	 */
+	@Override
+	public Class<? extends WebPage> getHomePage()
+	{
+		return LaunchPage.class;
 	}
 }
