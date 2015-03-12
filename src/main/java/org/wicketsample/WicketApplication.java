@@ -6,8 +6,6 @@
  */
 package org.wicketsample;
 
-import org.apache.directory.fortress.web.ErrorPage;
-import org.apache.directory.fortress.web.WicketSession;
 import org.apache.wicket.Session;
 import org.apache.wicket.core.request.handler.PageProvider;
 import org.apache.wicket.core.request.handler.RenderPageRequestHandler;
@@ -28,11 +26,15 @@ import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
  */
 public class WicketApplication extends WebApplication
 {
+
+/*
+	// TODO: needed for fortress sessions:
 	@Override
 	public Session newSession(Request request, Response response)
 	{
 		return new WicketSession(request);
 	}
+*/
 
 	/**
 	 * @see org.apache.wicket.Application#getHomePage()
@@ -50,8 +52,8 @@ public class WicketApplication extends WebApplication
 	public void init()
 	{
 		super.init();
-		// add your configuration here
-		getComponentInstantiationListeners().add(new SpringComponentInjector(this));
+		// TODO: needed for fortress spring bean injection:
+		//getComponentInstantiationListeners().add(new SpringComponentInjector(this));
 
 		// Catch runtime exceptions this way:
 		getRequestCycleListeners().add( new AbstractRequestCycleListener()

@@ -5,7 +5,6 @@ package org.wicketsample;
 
 
 import com.googlecode.wicket.jquery.ui.form.button.IndicatingAjaxButton;
-import org.apache.directory.fortress.web.FtIndicatingAjaxButton;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
@@ -27,8 +26,8 @@ public class Page3 extends MyBasePage
             super( id );
             add( new Label( "label3", "This is Page3.  If you see it, ROLE_TEST1 &/or ROLE_TEST3 is activated within " +
                 "your session" ) );
-            //add( new IndicatingAjaxButton( "page3.button1" )
-            add( new FtIndicatingAjaxButton( "page3.button1" )
+            add( new IndicatingAjaxButton( "page3.button1" )
+            //add( new FtIndicatingAjaxButton( "page3.button1" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
@@ -37,8 +36,8 @@ public class Page3 extends MyBasePage
                     target.appendJavaScript( ";alert('Page3 Button1 Pressed');" );
                 }
             } );
-            //add( new IndicatingAjaxButton( "page3.button2" )
-            add( new FtIndicatingAjaxButton( "page3.button2" )
+            add( new IndicatingAjaxButton( "page3.button2" )
+            //add( new FtIndicatingAjaxButton( "page3.button2" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
@@ -47,8 +46,8 @@ public class Page3 extends MyBasePage
                     target.appendJavaScript( ";alert('Page3 Button2 Pressed');" );
                 }
             } );
-            //add( new IndicatingAjaxButton( "page3.button3" )
-            add( new FtIndicatingAjaxButton( "page3.button3" )
+            add( new IndicatingAjaxButton( "page3.button3" )
+            //add( new FtIndicatingAjaxButton( "page3.button3" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )

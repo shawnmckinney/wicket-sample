@@ -9,13 +9,17 @@
     <display-name>myproject</display-name>
 
     <!-- SPRING config: -->
+<!-- TODO: needed for fortress spring bean injection:
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
+
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
+-->
 
     <filter>
         <filter-name>wicket.myproject</filter-name>
@@ -26,7 +30,7 @@
         </init-param>
     </filter>
 
-    <!-- This mapping must follow filter chain proxy for spring security checks to work! -->
+    <!-- Needed for wicket framework to have control of things. -->
     <filter-mapping>
         <filter-name>wicket.myproject</filter-name>
         <url-pattern>/*</url-pattern>
@@ -35,12 +39,13 @@
     </filter-mapping>
 
     <!-- #### Begin Wicket Sample Security config: #### -->
+<!--
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>app</web-resource-name>
             <url-pattern>/wicket/bookmarkable/org.wicketsample.LogoutPage</url-pattern>
         </web-resource-collection>
-        <!-- OMIT auth-constraint -->
+        &lt;!&ndash; OMIT auth-constraint &ndash;&gt;
     </security-constraint>
     <security-constraint>
         <display-name>Wicket Sample Security Constraints</display-name>
@@ -76,6 +81,7 @@
         <error-code>500</error-code>
         <location>/login/unexpected.html</location>
     </error-page>
+-->
 
 
 </web-app>

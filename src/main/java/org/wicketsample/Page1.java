@@ -4,7 +4,6 @@
 package org.wicketsample;
 
 
-import org.apache.directory.fortress.web.FtIndicatingAjaxButton;
 import org.apache.log4j.Logger;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import com.googlecode.wicket.jquery.ui.form.button.IndicatingAjaxButton;
@@ -31,8 +30,8 @@ public class Page1 extends MyBasePage
 
             add( new Label( "label1", "If you see this page, ROLE_TEST1 is activated within your session" ) );
 
-            add( new FtIndicatingAjaxButton( "page1.button1" )
-            //add( new IndicatingAjaxButton( "page1.button1" )
+            add( new IndicatingAjaxButton( "page1.button1" )
+            //add( new FtIndicatingAjaxButton( "page1.button1" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
@@ -43,8 +42,8 @@ public class Page1 extends MyBasePage
                     target.appendJavaScript(";alert('Page1 Button1 Pressed');");
                 }
             } );
-            add( new FtIndicatingAjaxButton( "page1.button2" )
-            //add( new IndicatingAjaxButton( "page1.button2" )
+            add( new IndicatingAjaxButton( "page1.button2" )
+            //add( new FtIndicatingAjaxButton( "page1.button2" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
@@ -53,8 +52,8 @@ public class Page1 extends MyBasePage
                     target.appendJavaScript(";alert('Page1 Button2 Pressed');");
                 }
             } );
-            add( new FtIndicatingAjaxButton( "page1.button3" )
-            //add( new IndicatingAjaxButton( "page1.button3" )
+            add( new IndicatingAjaxButton( "page1.button3" )
+            //add( new FtIndicatingAjaxButton( "page1.button3" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )

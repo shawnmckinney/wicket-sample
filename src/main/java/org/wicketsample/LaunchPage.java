@@ -19,6 +19,9 @@ public class LaunchPage extends MyBasePage
     private static final Logger LOG = Logger.getLogger( LaunchPage.class.getName() );
     public LaunchPage()
     {
+/*
+        TODO: needed for fortrtess logon:
+
         HttpServletRequest servletReq = (HttpServletRequest)getRequest().getContainerRequest();
         Principal principal = servletReq.getUserPrincipal();
         // needed anytime container security checker allows requests in with old cookie (perhaps after server/app restart)::
@@ -30,6 +33,7 @@ public class LaunchPage extends MyBasePage
             getSession().invalidate();
             setResponsePage( LogoutPage.class );
         }
+*/
         add(new Label("label1", "You have access to the link(s) above."));
     }
 }
