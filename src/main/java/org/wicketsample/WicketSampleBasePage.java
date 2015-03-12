@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 public abstract class WicketSampleBasePage extends WebPage
 {
 /*
-    // TODO: enable fortress spring bean injection here:
+    // TODO STEP 8a: enable fortress spring bean injection here:
     @SpringBean
     private AccessMgr accessMgr;
     @SpringBean
@@ -31,7 +31,7 @@ public abstract class WicketSampleBasePage extends WebPage
     public WicketSampleBasePage()
     {
 /*
-        // TODO: uncomment to startup fortress session:
+        // TODO STEP 8b: uncomment to startup fortress session:
         try
         {
             SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr, accessMgr );
@@ -42,7 +42,7 @@ public abstract class WicketSampleBasePage extends WebPage
             LOG.warn( error );
         }
 */
-        // TODO: change to FtBookmarkablePageLink:
+        // TODO STEP 8b: change to FtBookmarkablePageLink:
         add( new BookmarkablePageLink( "page1.link", Page1.class ) );
         add( new BookmarkablePageLink( "page2.link", Page1.class ) );
         add( new BookmarkablePageLink( "page3.link", Page1.class ) );
