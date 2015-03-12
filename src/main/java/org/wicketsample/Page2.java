@@ -34,7 +34,7 @@ public class Page2 extends MyBasePage
 
             add( new Label( "label2", "This is Page2" ) );
 
-            // TODO: for secure buttons, change to FtIndicatingAjaxButton:
+            // TODO: change to FtIndicatingAjaxButton:
             add( new IndicatingAjaxButton( "page2.button1" )
             {
                 @Override
@@ -44,7 +44,7 @@ public class Page2 extends MyBasePage
                 }
             } );
 
-            // TODO: for secure buttons, change to FtIndicatingAjaxButton:
+            // TODO: change to FtIndicatingAjaxButton:
             add( new IndicatingAjaxButton( "page2.button2" )
             {
                 @Override
@@ -54,7 +54,7 @@ public class Page2 extends MyBasePage
                 }
             } );
 
-            // TODO: for secure buttons, change to FtIndicatingAjaxButton:
+            // TODO: change to FtIndicatingAjaxButton:
             add( new IndicatingAjaxButton( "page2.button3" )
             {
                 @Override

@@ -19,7 +19,7 @@ import org.apache.wicket.markup.html.link.Link;
 public abstract class MyBasePage extends WebPage
 {
 /*
-    // TODO: uncomment for fortress spring bean injection:
+    // TODO: enable fortress spring bean injection here:
     @SpringBean
     private AccessMgr accessMgr;
     @SpringBean
@@ -30,10 +30,10 @@ public abstract class MyBasePage extends WebPage
 
     public MyBasePage()
     {
-        // TODO: uncomment to enable fortress startup:
+        // TODO: uncomment to startup fortress session:
         //SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr, accessMgr );
 
-        // TODO: for secure links, change to FtBookmarkablePageLink:
+        // TODO: change to FtBookmarkablePageLink:
         BookmarkablePageLink page1Link = new BookmarkablePageLink( "page1.link", Page1.class );
         add( page1Link );
         BookmarkablePageLink page2Link = new BookmarkablePageLink( "page2.link", Page2.class );

@@ -28,7 +28,7 @@ public class WicketApplication extends WebApplication
 {
 
 /*
-	// TODO: uncomment to enable fortress session storage in wicket session:
+	// TODO: uncomment save fortress session to wicket session:
 	@Override
 	public Session newSession(Request request, Response response)
 	{
@@ -52,7 +52,7 @@ public class WicketApplication extends WebApplication
 	public void init()
 	{
 		super.init();
-		// TODO: uncomment to enable fortress spring bean injection:
+		// TODO: uncomment to enable injection of fortress spring beans:
 		//getComponentInstantiationListeners().add(new SpringComponentInjector(this));
 
 		// Catch runtime exceptions this way:

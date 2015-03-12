@@ -33,7 +33,7 @@ public class Page3 extends MyBasePage
             super( id );
             add( new Label( "label3", "This is Page3." ) );
 
-            // TODO: for secure buttons, change to FtIndicatingAjaxButton:
+            // TODO: change to FtIndicatingAjaxButton:
             add( new IndicatingAjaxButton( "page3.button1" )
             {
                 @Override
@@ -43,7 +43,7 @@ public class Page3 extends MyBasePage
                 }
             } );
 
-            // TODO: for secure buttons, change to FtIndicatingAjaxButton:
+            // TODO: change to FtIndicatingAjaxButton:
             add( new IndicatingAjaxButton( "page3.button2" )
             {
                 @Override
@@ -53,7 +53,7 @@ public class Page3 extends MyBasePage
                 }
             } );
 
-            // TODO: for secure buttons, change to FtIndicatingAjaxButton:
+            // TODO: change to FtIndicatingAjaxButton:
             add( new IndicatingAjaxButton( "page3.button3" )
             {
                 @Override
