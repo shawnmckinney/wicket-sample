@@ -28,16 +28,13 @@ public abstract class WicketSampleBasePage extends WebPage
     private J2eePolicyMgr j2eePolicyMgr;
 */
 
-    protected static final Logger LOG = Logger.getLogger( WicketSampleBasePage.class.getName() );
-
     public WicketSampleBasePage()
     {
 /*
         // TODO: uncomment to startup fortress session:
         try
         {
-            SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr,
-                accessMgr );
+            SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr, accessMgr );
         }
         catch (SecurityException se)
         {
@@ -45,7 +42,6 @@ public abstract class WicketSampleBasePage extends WebPage
             LOG.warn( error );
         }
 */
-
         // TODO: change to FtBookmarkablePageLink:
         add( new BookmarkablePageLink( "page1.link", Page1.class ) );
         add( new BookmarkablePageLink( "page2.link", Page1.class ) );
@@ -74,4 +70,6 @@ public abstract class WicketSampleBasePage extends WebPage
         LOG.info( msg );
         target.appendJavaScript(";alert('" + msg + "');");
     }
+
+    protected static final Logger LOG = Logger.getLogger( WicketSampleBasePage.class.getName() );
 }
