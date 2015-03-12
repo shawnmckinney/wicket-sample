@@ -1,9 +1,11 @@
 # wicket-sample
+
 ##############################################################
 # prerequisites: completion of Apache Fortress Ten Minute Guide.
+# tested: fortress 1.0-RC40 snap on ubuntu 14.04.
 ##############################################################
 
-Ten Steps to enable fortress security in Wicket sample project:
+Ten Steps to enable fortress security in Wicket-Sample project:
 
 1. Add the login html files
 
@@ -27,12 +29,12 @@ Ten Steps to enable fortress security in Wicket sample project:
 
 9. edit Page1.java, Page2.java, Page3.java, enable ftButtons.
 
-10. run from the comment line:
+10. Build & Deploy (run from the command line):
 
 mvn clean tomcat:deploy
 
-##############################################################
 
+##############################################################
 To test: sign on with creds:
     a. wssuperuser/password
     b. wsuser1/password
