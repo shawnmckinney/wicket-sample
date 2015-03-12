@@ -4,6 +4,7 @@
 package org.wicketsample;
 
 import org.apache.log4j.Logger;
+import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
@@ -25,7 +26,7 @@ public abstract class MyBasePage extends WebPage
     private J2eePolicyMgr j2eePolicyMgr;
 */
 
-    private static final Logger LOG = Logger.getLogger( MyBasePage.class.getName() );
+    protected static final Logger LOG = Logger.getLogger( MyBasePage.class.getName() );
 
     public MyBasePage()
     {
@@ -49,5 +50,18 @@ public abstract class MyBasePage extends WebPage
         };
         add( actionLink );
         add( new Label( "footer", "This is free and unencumbered software released into the public domain." ) );
+    }
+
+    /**
+     * Used by the child pages.
+     *
+     * @param target for modal panel
+     * @param msg to log and display user info
+     */
+    protected void logIt(AjaxRequestTarget target, String msg)
+    {
+        info( msg );
+        LOG.info( msg );
+        target.appendJavaScript(";alert('" + msg + "');");
     }
 }

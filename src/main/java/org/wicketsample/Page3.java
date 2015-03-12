@@ -39,8 +39,7 @@ public class Page3 extends MyBasePage
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
-                    info( "Button1 Pressed" );
-                    target.appendJavaScript( ";alert('Page3 Button1 Pressed');" );
+                    logIt( target, "Page 3, Button 1 Pressed" );
                 }
             } );
 
@@ -50,8 +49,7 @@ public class Page3 extends MyBasePage
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
-                    info( "Button2 Pressed" );
-                    target.appendJavaScript( ";alert('Page3 Button2 Pressed');" );
+                    logIt( target, "Page 3, Button 2 Pressed" );
                 }
             } );
 
@@ -61,8 +59,7 @@ public class Page3 extends MyBasePage
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
-                    info( "Button3 Pressed" );
-                    target.appendJavaScript( ";alert('Page3 Button3 Pressed');" );
+                    logIt( target, "Page 3, Button 3 Pressed" );
                 }
             } );
         }

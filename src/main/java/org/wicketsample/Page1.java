@@ -3,8 +3,6 @@
  */
 package org.wicketsample;
 
-
-import org.apache.log4j.Logger;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import com.googlecode.wicket.jquery.ui.form.button.IndicatingAjaxButton;
 import org.apache.wicket.markup.html.basic.Label;
@@ -18,8 +16,6 @@ import org.apache.wicket.markup.html.form.Form;
  */
 public class Page1 extends MyBasePage
 {
-    private static final Logger LOG = Logger.getLogger( MyBasePage.class.getName() );
-
     public Page1()
     {
         add( new Page1Form( "pageForm" ) );
@@ -42,10 +38,7 @@ public class Page1 extends MyBasePage
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
-                    String msg = "Page 1, Button 1 Pressed";
-                    info( msg );
-                    LOG.info( msg );
-                    target.appendJavaScript(";alert('Page1 Button1 Pressed');");
+                    logIt( target, "Page 1, Button 1 Pressed" );
                 }
             } );
 
@@ -55,8 +48,7 @@ public class Page1 extends MyBasePage
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
-                    info( "Page 2, Button2 Pressed" );
-                    target.appendJavaScript(";alert('Page1 Button2 Pressed');");
+                    logIt( target, "Page 1, Button 2 Pressed" );
                 }
             } );
 
@@ -66,8 +58,7 @@ public class Page1 extends MyBasePage
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
-                    info( "Page 3, Button3 Pressed" );
-                    target.appendJavaScript(";alert('Page1 Button3 Pressed');");
+                    logIt( target, "Page 1, Button 3 Pressed" );
                 }
             } );
         }
