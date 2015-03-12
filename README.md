@@ -21,7 +21,7 @@ Ten Steps to enable fortress security in Wicket sample project:
 
 6. Edit the LaunchPage, uncomment
 
-7. Edit MyBasePage, uncomment, enable ftLinks
+7. Edit WicketSampleBasePage, uncomment, enable ftLinks
 
 8. Edit WicketApplication, uncomment
 

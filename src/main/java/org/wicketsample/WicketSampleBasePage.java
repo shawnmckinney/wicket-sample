@@ -16,7 +16,7 @@ import org.apache.wicket.markup.html.link.Link;
  * @author Shawn McKinney
  * @version $Rev$
  */
-public abstract class MyBasePage extends WebPage
+public abstract class WicketSampleBasePage extends WebPage
 {
 /*
     // TODO: enable fortress spring bean injection here:
@@ -26,9 +26,9 @@ public abstract class MyBasePage extends WebPage
     private J2eePolicyMgr j2eePolicyMgr;
 */
 
-    protected static final Logger LOG = Logger.getLogger( MyBasePage.class.getName() );
+    protected static final Logger LOG = Logger.getLogger( WicketSampleBasePage.class.getName() );
 
-    public MyBasePage()
+    public WicketSampleBasePage()
     {
         // TODO: uncomment to startup fortress session:
         //SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr, accessMgr );

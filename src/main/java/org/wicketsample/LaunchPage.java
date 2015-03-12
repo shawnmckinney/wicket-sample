@@ -7,16 +7,13 @@ package org.wicketsample;
 import org.apache.log4j.Logger;
 import org.apache.wicket.markup.html.basic.Label;
 
-import javax.servlet.http.HttpServletRequest;
-import java.security.Principal;
-
 /**
- * The Wicket Sample web app routes all users to this page after logon.
+ * This Wicket Sample routes traffic here.  It displays list of page links at the top.
  *
  * @author Shawn McKinney
  * @version $Rev$
  */
-public class LaunchPage extends MyBasePage
+public class LaunchPage extends WicketSampleBasePage
 {
     private static final Logger LOG = Logger.getLogger( LaunchPage.class.getName() );
     public LaunchPage()

@@ -7,7 +7,7 @@ package org.wicketsample;
  * @author Shawn McKinney
  * @version $Rev$
  */
-public final class LoginPage extends MyBasePage
+public final class LoginPage extends WicketSampleBasePage
 {
     public LoginPage()
     {

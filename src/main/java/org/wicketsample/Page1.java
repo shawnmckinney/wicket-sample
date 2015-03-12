@@ -14,7 +14,7 @@ import org.apache.wicket.markup.html.form.Form;
  * @author Shawn McKinney
  * @version $Rev$
  */
-public class Page1 extends MyBasePage
+public class Page1 extends WicketSampleBasePage
 {
     public Page1()
     {

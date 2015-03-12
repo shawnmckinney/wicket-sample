@@ -9,10 +9,12 @@ import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.model.Model;
 
 /**
+ * Errors routed here where it's job is to display out an error message.
+ *
  * @author Shawn McKinney
  * @version $Rev$
  */
-public class ErrorPage extends MyBasePage
+public class ErrorPage extends WicketSampleBasePage
 {
     public ErrorPage( Exception e )
     {

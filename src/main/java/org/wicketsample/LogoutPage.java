@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author Shawn McKinney
  * @version $Rev$
  */
-public class LogoutPage extends MyBasePage
+public class LogoutPage extends WicketSampleBasePage
 {
     private static final Logger LOG = Logger.getLogger( LogoutPage.class.getName() );
     public LogoutPage()
