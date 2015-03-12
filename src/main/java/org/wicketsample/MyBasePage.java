@@ -3,11 +3,15 @@
  */
 package org.wicketsample;
 
+import org.apache.directory.fortress.core.AccessMgr;
+import org.apache.directory.fortress.realm.J2eePolicyMgr;
+import org.apache.directory.fortress.web.SecUtils;
 import org.apache.log4j.Logger;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.link.Link;
+import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -19,8 +23,10 @@ import javax.servlet.http.HttpServletRequest;
  */
 public abstract class MyBasePage extends WebPage
 {
-    //@SpringBean
-    //private AccessMgr accessMgr;
+    @SpringBean
+    private AccessMgr accessMgr;
+    @SpringBean
+    private J2eePolicyMgr j2eePolicyMgr;
 
     private static final Logger LOG = Logger.getLogger( MyBasePage.class.getName() );
 
@@ -38,48 +44,13 @@ public abstract class MyBasePage extends WebPage
             @Override
             public void onClick()
             {
-                HttpServletRequest servletReq = ( HttpServletRequest ) getRequest().getContainerRequest();
-                servletReq.getSession().invalidate();
-                getSession().invalidate();
                 setResponsePage(LogoutPage.class);
             }
         };
         add( actionLink );
         add( new Label( "footer", "This is free and unencumbered software released into the public domain." ) );
-        //HttpServletRequest servletReq = ( HttpServletRequest ) getRequest().getContainerRequest();
-        //Principal principal = servletReq.getUserPrincipal();
-        //boolean isLoggedIn = principal != null;
 
-        // Is this a Java EE secured page && has the User successfully authenticated already?
-        //if ( isLoggedIn )
-        //{
-            // TODO: make sure this is necessary:
-        //    synchronized ( ( RbacSession ) RbacSession.get() )
-        //    {
-        //        if ( GlobalUtils.getRbacSession( this ) == null )
-        //        {
-        //            try
-        //            {
-        //                // Create an RBAC session and attach to Wicket session:
-        //                Session session = accessMgr.createSession( new User( principal.getName() ), true );
-        //                String message = "RBAC Session successfully created for userId: " + session.getUserId();
-        //                ( ( RbacSession ) RbacSession.get() ).setSession( session );
-        //                List<Permission> permissions = accessMgr.sessionPermissions( session );
-        //                ( ( RbacSession ) RbacSession.get() ).setPermissions( permissions );
-        //                LOG.debug( message );
-        //            }
-        //            catch ( org.apache.directory.fortress.core.SecurityException se )
-        //            {
-        //                String error = "caught SecurityException=" + se;
-        //                LOG.error( error );
-        //                throw new RuntimeException( error );
-        //            }
-        //        }
-        //    }
-        //}
-        //else
-        //{
-        //    actionLink.setVisible( false );
-        //}
+        // To enable security, uncomment this line:
+        SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr, accessMgr );
     }
 }

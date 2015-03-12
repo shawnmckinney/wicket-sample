@@ -4,6 +4,8 @@
 package org.wicketsample;
 
 
+import org.apache.directory.fortress.web.FtIndicatingAjaxButton;
+import org.apache.log4j.Logger;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import com.googlecode.wicket.jquery.ui.form.button.IndicatingAjaxButton;
 import org.apache.wicket.markup.html.basic.Label;
@@ -11,6 +13,7 @@ import org.apache.wicket.markup.html.form.Form;
 
 public class Page1 extends MyBasePage
 {
+    private static final Logger LOG = Logger.getLogger( MyBasePage.class.getName() );
 
     public Page1()
     {
@@ -28,33 +31,35 @@ public class Page1 extends MyBasePage
 
             add( new Label( "label1", "If you see this page, ROLE_TEST1 is activated within your session" ) );
 
-            //add( new SecureIndicatingAjaxButton( "page1.button1", PAGE1, GlobalUtils.BUTTON1 )
-            add( new IndicatingAjaxButton( "page1.button1" )
+            add( new FtIndicatingAjaxButton( "page1.button1" )
+            //add( new IndicatingAjaxButton( "page1.button1" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
-                    info( "Button Pressed" );
+                    String msg = "Page 1, Button 1 Pressed";
+                    info( msg );
+                    LOG.info( msg );
                     target.appendJavaScript(";alert('Page1 Button1 Pressed');");
                 }
             } );
-//            add( new SecureIndicatingAjaxButton( "page1.button2", PAGE1, GlobalUtils.BUTTON2 )
-            add( new IndicatingAjaxButton( "page1.button2" )
+            add( new FtIndicatingAjaxButton( "page1.button2" )
+            //add( new IndicatingAjaxButton( "page1.button2" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
-                    info( "Button2 Pressed" );
+                    info( "Page 2, Button2 Pressed" );
                     target.appendJavaScript(";alert('Page1 Button2 Pressed');");
                 }
             } );
-//            add( new SecureIndicatingAjaxButton( "page1.button3", PAGE1, GlobalUtils.BUTTON3 )
-            add( new IndicatingAjaxButton( "page1.button3" )
+            add( new FtIndicatingAjaxButton( "page1.button3" )
+            //add( new IndicatingAjaxButton( "page1.button3" )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
-                    info( "Button3 Pressed" );
+                    info( "Page 3, Button3 Pressed" );
                     target.appendJavaScript(";alert('Page1 Button3 Pressed');");
                 }
             } );

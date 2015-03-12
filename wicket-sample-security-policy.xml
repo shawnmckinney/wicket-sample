@@ -75,75 +75,75 @@
             </addroleinheritance>
 
             <delpermobj>
-                <permobj objName="org.wicketsample.Page1" />
-                <permobj objName="org.wicketsample.Page2" />
-                <permobj objName="org.wicketsample.Page3" />
+                <permobj objName="Page1" />
+                <permobj objName="Page2" />
+                <permobj objName="Page3" />
             </delpermobj>
 
             <addpermobj>
-                <permobj objName="org.wicketsample.Page1" description="Wicket Sample Test Page 1" ou="org.wicketsample.perms" />
-                <permobj objName="org.wicketsample.Page2" description="Wicket Sample Test Page 2" ou="org.wicketsample.perms" />
-                <permobj objName="org.wicketsample.Page3" description="Wicket Sample Test Page 3" ou="org.wicketsample.perms" />
+                <permobj objName="Page1" description="Wicket Sample Test Page 1" ou="org.wicketsample.perms" />
+                <permobj objName="Page2" description="Wicket Sample Test Page 2" ou="org.wicketsample.perms" />
+                <permobj objName="Page3" description="Wicket Sample Test Page 3" ou="org.wicketsample.perms" />
             </addpermobj>
 
             <delpermop>
-                <permop objName="org.wicketsample.Page1" opName="link" type="Button"/>
-                <permop objName="org.wicketsample.Page2" opName="link" type="Button"/>
-                <permop objName="org.wicketsample.Page3" opName="link" type="Button"/>
-                <permop objName="org.wicketsample.Page1" opName="Button1"/>
-                <permop objName="org.wicketsample.Page1" opName="Button2"/>
-                <permop objName="org.wicketsample.Page1" opName="Button3"/>
-                <permop objName="org.wicketsample.Page2" opName="Button1"/>
-                <permop objName="org.wicketsample.Page2" opName="Button2"/>
-                <permop objName="org.wicketsample.Page2" opName="Button3"/>
-                <permop objName="org.wicketsample.Page3" opName="Button1"/>
-                <permop objName="org.wicketsample.Page3" opName="Button2"/>
-                <permop objName="org.wicketsample.Page3" opName="Button3"/>
+                <permop objName="Page1" opName="link" type="Button"/>
+                <permop objName="Page2" opName="link" type="Button"/>
+                <permop objName="Page3" opName="link" type="Button"/>
+                <permop objName="Page1" opName="Button1"/>
+                <permop objName="Page1" opName="Button2"/>
+                <permop objName="Page1" opName="Button3"/>
+                <permop objName="Page2" opName="Button1"/>
+                <permop objName="Page2" opName="Button2"/>
+                <permop objName="Page2" opName="Button3"/>
+                <permop objName="Page3" opName="Button1"/>
+                <permop objName="Page3" opName="Button2"/>
+                <permop objName="Page3" opName="Button3"/>
             </delpermop>
 
             <addpermop>
-                <permop objName="org.wicketsample.Page1" opName="link" />
-                <permop objName="org.wicketsample.Page2" opName="link" />
-                <permop objName="org.wicketsample.Page3" opName="link" />
-                <permop objName="org.wicketsample.Page1" opName="Button1" />
-                <permop objName="org.wicketsample.Page1" opName="Button2" />
-                <permop objName="org.wicketsample.Page1" opName="Button3" />
-                <permop objName="org.wicketsample.Page2" opName="Button1" />
-                <permop objName="org.wicketsample.Page2" opName="Button2" />
-                <permop objName="org.wicketsample.Page2" opName="Button3" />
-                <permop objName="org.wicketsample.Page3" opName="Button1" />
-                <permop objName="org.wicketsample.Page3" opName="Button2" />
-                <permop objName="org.wicketsample.Page3" opName="Button3" />
+                <permop objName="Page1" opName="link" />
+                <permop objName="Page2" opName="link" />
+                <permop objName="Page3" opName="link" />
+                <permop objName="Page1" opName="Button1" />
+                <permop objName="Page1" opName="Button2" />
+                <permop objName="Page1" opName="Button3" />
+                <permop objName="Page2" opName="Button1" />
+                <permop objName="Page2" opName="Button2" />
+                <permop objName="Page2" opName="Button3" />
+                <permop objName="Page3" opName="Button1" />
+                <permop objName="Page3" opName="Button2" />
+                <permop objName="Page3" opName="Button3" />
             </addpermop>
 
             <delpermgrant>
-                <permgrant objName="org.wicketsample.Page1" opName="link" roleNm="wsUsers1Role"/>
-                <permgrant objName="org.wicketsample.Page2" opName="link" roleNm="wsUsers2Role"/>
-                <permgrant objName="org.wicketsample.Page3" opName="link" roleNm="wsUsers3Role"/>
-                <permgrant objName="org.wicketsample.Page1" opName="Button1" roleNm="wsUsers1Role"/>
-                <permgrant objName="org.wicketsample.Page1" opName="Button2" roleNm="wsUsers1Role"/>
-                <permgrant objName="org.wicketsample.Page1" opName="Button3" roleNm="wsUsers1Role"/>
-                <permgrant objName="org.wicketsample.Page2" opName="Button1" roleNm="wsUsers2Role"/>
-                <permgrant objName="org.wicketsample.Page2" opName="Button2" roleNm="wsUsers2Role"/>
-                <permgrant objName="org.wicketsample.Page2" opName="Button3" roleNm="wsUsers2Role"/>
-                <permgrant objName="org.wicketsample.Page3" opName="Button1" roleNm="wsUsers3Role"/>
-                <permgrant objName="org.wicketsample.Page3" opName="Button2" roleNm="wsUsers3Role"/>
-                <permgrant objName="org.wicketsample.Page3" opName="Button3" roleNm="wsUsers3Role"/>
+                <permgrant objName="Page1" opName="link" roleNm="wsUsers1Role"/>
+                <permgrant objName="Page2" opName="link" roleNm="wsUsers2Role"/>
+                <permgrant objName="Page3" opName="link" roleNm="wsUsers3Role"/>
+                <permgrant objName="Page1" opName="Button1" roleNm="wsUsers1Role"/>
+                <permgrant objName="Page1" opName="Button2" roleNm="wsUsers1Role"/>
+                <permgrant objName="Page1" opName="Button3" roleNm="wsUsers1Role"/>
+                <permgrant objName="Page2" opName="Button1" roleNm="wsUsers2Role"/>
+                <permgrant objName="Page2" opName="Button2" roleNm="wsUsers2Role"/>
+                <permgrant objName="Page2" opName="Button3" roleNm="wsUsers2Role"/>
+                <permgrant objName="Page3" opName="Button1" roleNm="wsUsers3Role"/>
+                <permgrant objName="Page3" opName="Button2" roleNm="wsUsers3Role"/>
+                <permgrant objName="Page3" opName="Button3" roleNm="wsUsers3Role"/>
             </delpermgrant>
 
             <addpermgrant>
-                <permgrant objName="org.wicketsample.Page1" opName="link" roleNm="wsUsers1Role"/>
-                <permgrant objName="org.wicketsample.Page2" opName="link" roleNm="wsUsers2Role"/>
-                <permgrant objName="org.wicketsample.Page3" opName="link" roleNm="wsUsers3Role"/>
-                <permgrant objName="org.wicketsample.Page1" opName="Button1" roleNm="wsUsers1Role"/>
-                <permgrant objName="org.wicketsample.Page1" opName="Button2" roleNm="wsUsers1Role"/>
-                <permgrant objName="org.wicketsample.Page1" opName="Button3" roleNm="wsUsers1Role"/>
-                <permgrant objName="org.wicketsample.Page2" opName="Button1" roleNm="wsUsers2Role"/>
-                <permgrant objName="org.wicketsample.Page2" opName="Button2" roleNm="wsUsers2Role"/>
-                <permgrant objName="org.wicketsample.Page2" opName="Button3" roleNm="wsUsers2Role"/>
-                <permgrant objName="org.wicketsample.Page3" opName="Button1" roleNm="wsUsers3Role"/>
-                <permgrant objName="org.wicketsample.Page3" opName="Button2" roleNm="wsUsers3Role"/>
-                <permgrant objName="org.wicketsample.Page3" opName="Button3" roleNm="wsUsers3Role"/>
+                <permgrant objName="Page1" opName="link" roleNm="wsUsers1Role"/>
+                <permgrant objName="Page2" opName="link" roleNm="wsUsers2Role"/>
+                <permgrant objName="Page3" opName="link" roleNm="wsUsers3Role"/>
+                <permgrant objName="Page1" opName="Button1" roleNm="wsUsers1Role"/>
+                <permgrant objName="Page1" opName="Button2" roleNm="wsUsers1Role"/>
+                <permgrant objName="Page1" opName="Button3" roleNm="wsUsers1Role"/>
+                <permgrant objName="Page2" opName="Button1" roleNm="wsUsers2Role"/>
+                <permgrant objName="Page2" opName="Button2" roleNm="wsUsers2Role"/>
+                <permgrant objName="Page2" opName="Button3" roleNm="wsUsers2Role"/>
+                <permgrant objName="Page3" opName="Button1" roleNm="wsUsers3Role"/>
+                <permgrant objName="Page3" opName="Button2" roleNm="wsUsers3Role"/>
+                <permgrant objName="Page3" opName="Button3" roleNm="wsUsers3Role"/>
             </addpermgrant>
 
             <delorgunit>

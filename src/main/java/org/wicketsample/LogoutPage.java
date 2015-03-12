@@ -16,7 +16,7 @@ import java.security.Principal;
  */
 public class LogoutPage extends MyBasePage
 {
-    private static final Logger LOG = Logger.getLogger( LaunchPage.class.getName() );
+    private static final Logger LOG = Logger.getLogger( LogoutPage.class.getName() );
     public LogoutPage()
     {
         HttpServletRequest servletReq = (HttpServletRequest)getRequest().getContainerRequest();
