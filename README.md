@@ -8,7 +8,7 @@ This is free and unencumbered software released into the public domain.
 
 # Instructions for downloading app and generating the install doc:
 
-# 1. Download wicket-sammple from github: https://github.com/shawnmckinney/wicket-sample/archive/master.zip
+## 1. Download wicket-sample from github: https://github.com/shawnmckinney/wicket-sample/archive/master.zip
 
 # 2. Extract the zip archive to your local machine.
 
