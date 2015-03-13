@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 public abstract class WicketSampleBasePage extends WebPage
 {
 /*
-    // TODO STEP 8a: enable fortress spring bean injection here:
+    // TODO STEP 8a: enable spring injection of fortress bean here:
     @SpringBean
     private AccessMgr accessMgr;
     @SpringBean
@@ -31,18 +31,18 @@ public abstract class WicketSampleBasePage extends WebPage
     public WicketSampleBasePage()
     {
 /*
-        // TODO STEP 8b: uncomment to startup fortress session:
+        // TODO STEP 8b: uncomment call to enableFortress:
         try
         {
             SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr, accessMgr );
         }
-        catch (SecurityException se)
+        catch (org.apache.directory.fortress.core.SecurityException se)
         {
             String error = "WicketSampleBasePage caught security exception : " + se;
             LOG.warn( error );
         }
 */
-        // TODO STEP 8b: change to FtBookmarkablePageLink:
+        // TODO STEP 8c: change to FtBookmarkablePageLink:
         add( new BookmarkablePageLink( "page1.link", Page1.class ) );
         add( new BookmarkablePageLink( "page2.link", Page2.class ) );
         add( new BookmarkablePageLink( "page3.link", Page3.class ) );

@@ -29,7 +29,8 @@ Ten Steps to enable fortress security in Wicket-Sample project:
 
 8. Edit WicketSampleBasePage
  a. uncomment fortress spring bean injection
- b. change to FtBookmarkablePageLink
+ b. uncomment call to enableFortress
+ c. change to FtBookmarkablePageLink
 
 9. edit Page1.java, Page2.java, Page3.java, enable ftButtons.
  a-i. change to FtIndicatingAjaxButton
