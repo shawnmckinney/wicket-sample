@@ -2,7 +2,7 @@ This is free and unencumbered software released into the public domain.
 
 # wicket-sample ENABLE FORTRESS README
 # Prerequisites for target machine:
-1. completion of README.md
+1. completion of steps in project README.md
 2. completion of the following steps in the Apache Fortress Ten Minute Guide:
    Setup Apache Directory Server
    Setup Apache Directory Studio
@@ -13,27 +13,15 @@ This is free and unencumbered software released into the public domain.
 
 # Steps to enable fortress
 
-#1. Download wicket-sample project
-
-# a. extract the zip
-
-# b. follow the instructions in README
-
-You may now hit the sample web app:
-
-http://localhost:8080/wicket-sample
-
-To enable security, keep going…
-
-# 2. Add the static /login html files
+# 1. Add the static /login html files
 
 If you downloaded the wicket-sample source, this is already taken care of.
 
-# 3. Add LoginPage, LogoutPage java and html
+# 2. Add LoginPage, LogoutPage java and html
 
 Again these are already part of the wicket-sample source distro.
 
-# 4. Edit the pom.xml
+# 3. Edit the pom.xml
 
 # a. uncomment the dependencies near the top
 
@@ -41,7 +29,7 @@ Again these are already part of the wicket-sample source distro.
 
 At the completion of this step, the necessary binaries will be available to the app.
 
-# 5. Edit the web.xml
+# 4. Edit the web.xml
 
 # a. uncomment the spring settings
 
@@ -49,15 +37,15 @@ At the completion of this step, the necessary binaries will be available to the 
 
 Af the completion of this step, java EE security has been enabled.
 
-# 6. Rename context.xml.example to context.xml
+# 5. Rename context.xml.example to context.xml
 
 The context.xml is how the fortress realm integrates with the sample wicket application.
 
-# 7. Rename fortress.properties.example to fortress.properties.
+# 6. Rename fortress.properties.example to fortress.properties.
 
 After completing the fortress ten minute guide, this step should be familiar to you.  It is where the fortress runtime is connected with a remote ldap server.
 
-# 8. Edit WicketApplication.java
+# 7. Edit WicketApplication.java
 
 # a. uncomment fortress session override
 
