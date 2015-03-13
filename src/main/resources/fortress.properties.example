@@ -5,21 +5,21 @@
 # This param tells fortress what type of ldap server in use:
 ldap.server.type=apacheds
 
-# Use value from [Set Hostname Entry]:
+# ldap host name
 host=localhost
 
-# if ApacheDS is listening on TLS port:
+# if ApacheDS is listening on
 port=10389
 
-# These credentials are used for read/write access to all nodes under suffix:
+# If ApacheDS, these credentials are used for read/write to fortress DIT
 admin.user=uid=admin,ou=system
 admin.pw=secret
 
-# This is min/max settings for LDAP administrator pool connections that have read/write access to all nodes under suffix:
+# This is min/max settings for admin pool connections:
 min.admin.conn=1
 max.admin.conn=10
 
-# This node contains fortress properties stored on behalf of connecting LDAP clients:
+# This node contains more fortress properties stored on behalf of connecting LDAP clients:
 config.realm=DEFAULT
 config.root=ou=Config,dc=example,dc=com
 

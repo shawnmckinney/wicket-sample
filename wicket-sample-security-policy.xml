@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright (c) 2009-2013. Joshua Tree Software, LLC.  All Rights Reserved.
+  ~ This is free and unencumbered software released into the public domain.
   -->
 <project basedir="." default="all" name="Apache Fortress Policy">
 
