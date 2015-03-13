@@ -1,51 +1,27 @@
-# wicket-sample
+This is free and unencumbered software released into the public domain.
 
-##############################################################
-# prerequisites: completion of Apache Fortress Ten Minute Guide.
-# tested: fortress 1.0-RC40 snap on ubuntu 14.04.
-##############################################################
+# wicket-sample README
+# Prerequisites for target machine:
+# 1. Java 7 (or greater) sdk
+# 2. Apache Maven 3
+# 3. Apache Tomcat 7 or greater
 
-Ten Steps to enable fortress and java ee security inside the Wicket-Sample project.
+# Instructions for downloading app and generating the install doc:
 
-Complete steps to enable fortress and java ee security inside of a sample wicket app.
-The steps below correspond with this project's source.
+# 1. Download wicket-sammple from github: https://github.com/shawnmckinney/wicket-sample/archive/master.zip
 
-1. Add the static /login html files
+# 2. Extract the zip archive to your local machine.
 
-2. Add LoginPage, LogoutPage java and html
+# 3. cd wicket-sample-master
 
-3. Edit the pom.xml
-  a. uncomment the dependencies at the top
-  b. uncomment the maven ant task
+# 4. Set java and maven home env variables.
 
-4. Edit the web.xml
-  a. uncomment the spring
-  b. uncomment the java ee security constraints
+# 5. Run this command from the root package:
+# mvn clean tomcat:deploy
 
-5. Rename context.xml.example to context.xml
+# 6. Point your web browser to the following location:
+http://localhost:8080/wicket-sample
 
-6. Rename fortress.properties.example to fortress.properties.
-  - file points the security calls to an ldap server.
+Click on the links, buttons.  Notice there is no security currently enabled for this app.
 
-7. Edit WicketApplication.java
- a. uncomment fortress session override
- b. uncomment fortress spring bean injector
-
-8. Edit WicketSampleBasePage.java
- a. uncomment fortress spring bean injection
- b. uncomment call to enableFortress
- c. change to FtBookmarkablePageLink
-
-9. edit Page1.java, Page2.java, Page3.java
- a - i. change to FtIndicatingAjaxButton
-
-10. Build & Deploy (run from the command line):
-
-mvn clean tomcat:deploy
-
-##############################################################
-To test: sign on with creds:
-    a. wssuperuser/password
-    b. wsuser1/password
-    c. wsuser2/password
-    d. wsuser3/password
+To enable security, follow the instructions under: ENABLE-FORTRESS-README.md
