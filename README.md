@@ -6,7 +6,7 @@
 ### 2. Apache Maven 3
 ### 3. Apache Tomcat 7 or greater
 
-## Instructions for downloading wicket sample app and generating the install doc:
+## Instructions for deploying wicket sample app to Tomcat:
 
 ### 1. Download wicket-sample from github: https://github.com/shawnmckinney/wicket-sample/archive/master.zip
 
@@ -18,6 +18,8 @@
 
 ### 5. Run this command from the root package:
 mvn clean tomcat:deploy
+
+[Note: if trouble with auto-deploy step, you may need to manually deploy wicket-sample.war to tomcat.]
 
 ### 6. Point your web browser to the following location:
 http://localhost:8080/wicket-sample
