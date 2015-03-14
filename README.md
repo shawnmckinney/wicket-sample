@@ -15,8 +15,9 @@
 ### 4. Set java and maven home env variables.
 
 ### 5. Run this command from the root package:
+````
 mvn clean tomcat:deploy
-
+````
 [Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps]
 
 ### 6. Point your web browser to the following location:
