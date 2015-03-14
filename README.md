@@ -19,7 +19,7 @@
 ### 5. Run this command from the root package:
 mvn clean tomcat:deploy
 
-[Note: if trouble with auto-deploy step, you may need to manually deploy wicket-sample.war to tomcat.]
+[Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps]
 
 ### 6. Point your web browser to the following location:
 http://localhost:8080/wicket-sample
