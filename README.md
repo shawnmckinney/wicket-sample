@@ -1,5 +1,3 @@
-#######This is free and unencumbered software released into the public domain.
-
 # wicket-sample README
 ## Prerequisites for target machine:
 ### 1. Java 7 (or greater) sdk
