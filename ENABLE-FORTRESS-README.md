@@ -265,6 +265,7 @@ ehcache.config.file=ehcache.xml
 
  Tell wicket about fortress sessions and objects.
     * uncomment fortress session override
+
  Here we override app’s wicket session with a new one that can hold onto fortress session and perms:
  ```java
 	// TODO STEP 7a: uncomment save fortress session to wicket session:
