@@ -12,7 +12,7 @@
 3. Apache Tomcat 7 or greater
 
 -------------------------------------------------------------------------------
-## Instructions for building deploying wicket-sample app to tomcat server:
+## Instructions for building/deploying the wicket-sample app to tomcat
 1. Download wicket-sample from github: [Download ZIP](https://github.com/shawnmckinney/wicket-sample/archive/master.zip)
 
 2. Extract the zip archive to your local machine.
