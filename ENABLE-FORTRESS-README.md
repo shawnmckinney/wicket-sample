@@ -66,7 +66,6 @@
             <version>1.4.01</version>
         </dependency>
         ...
-
     * uncomment the maven ant task near the bottom
     ...
     <plugin>
