@@ -1,4 +1,7 @@
 # wicket-sample README
+
+![wicket sample no security](src/main/javadoc/doc-files/Screenshot-wicket-sample-nosecurity.png "No Secrity")
+
 ## Prerequisites for target machine:
 1. Java 7 (or greater) sdk
 2. Apache Maven 3
@@ -14,9 +17,7 @@
 mvn clean tomcat:deploy
 ```
 [Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps]
-6. Point your web browser to the following location:
-[wicket sample home page](http://localhost:8080/wicket-sample)
+6. Point your web browser to the following location: [wicket sample home page](http://localhost:8080/wicket-sample)
 
-#### Click on the links, buttons.  There is no security enabled for this app.
-
-#### To enable security, follow the instructions here: [ENABLE-FORTRESS-README.md](ENABLE-FORTRESS-README.md)
+ Click on the links, buttons.  There is no security enabled for this app.
+7. To enable security, follow the instructions here: [ENABLE-FORTRESS-README.md](ENABLE-FORTRESS-README.md)
