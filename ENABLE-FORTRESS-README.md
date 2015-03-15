@@ -27,14 +27,20 @@
     * uncomment the maven ant task near the bottom
 
  Now the necessary binaries will be available to the app.
+
 4. Edit the web.xml
     * uncomment the spring settings
     * uncomment the java ee security constraints
-...After this step, java EE security has been enabled.
+ After this step, java EE security has been enabled.
+
 5. Rename context.xml.example to context.xml
-...The context.xml is how the fortress realm integrates with the sample wicket application.
+
+ The context.xml is how the fortress realm integrates with the sample wicket application.
+
 6. Rename fortress.properties.example to fortress.properties.
-...After completing the fortress ten minute guide, this step should be familiar to you.  It is where the fortress runtime is connected with a remote ldap server.
+
+ After completing the fortress ten minute guide, this step should be familiar to you.  It is where the fortress runtime is connected with a remote ldap server.
+
 7. Edit WicketApplication.java
     * uncomment fortress session override
     * uncomment fortress spring bean injector
