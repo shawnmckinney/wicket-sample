@@ -38,5 +38,5 @@ mvn clean tomcat:deploy
 4. *Notice that there is no security enabled for this app*
 
 -------------------------------------------------------------------------------
-## How to enable security in wicket-sample app:
+## How to enable security in the wicket-sample app
  Follow the instructions here: [README-ENABLE-FORTRESS.md](README-ENABLE-FORTRESS.md)
