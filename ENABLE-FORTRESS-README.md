@@ -179,7 +179,7 @@
 
  The wicket logout page is excluded from java EE security constraints.  Otherwise, a problem occurs preventing unauthorized users from logging out.
 
- ```
+ ```xml
  <security-constraint>
    <web-resource-collection>
    <web-resource-name>app</web-resource-name>
@@ -187,7 +187,7 @@
    </web-resource-collection>
    <!-- OMIT auth-constraint -->
  </security-constraint>
- ``
+ ```
 
 
 5. Rename context.xml.example to context.xml
