@@ -44,17 +44,25 @@
 7. Edit WicketApplication.java
     * uncomment fortress session override
     * uncomment fortress spring bean injector
-...These steps are necessary to get fortress hooked into the sample app.
+
+ These steps are necessary to get fortress hooked into the sample app.
+
 8. Edit WicketSampleBasePage.java
     * uncomment fortress spring bean injection
-    ...These beans are how the app calls fortress
+
+     These beans are how the app calls fortress
     * uncomment call to enableFortress
-    ... Needed to manage the sessions on behalf of the users.
+
+     Needed to manage the sessions on behalf of the users.
     * change to FtBookmarkablePageLink
-...This component maps the page links to fortress permissions.
+
+ This component maps the page links to fortress permissions.
+
 9. Edit Page1.java, Page2.java, Page3.java
     * change to FtIndicatingAjaxButton
-...This component maps the page buttons to fortress permissions
+
+ This component maps the page buttons to fortress permissions
+
 10. Build & Deploy (run from the command line):
 ```
 mvn clean tomcat:deploy
