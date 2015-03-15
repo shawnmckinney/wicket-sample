@@ -359,18 +359,27 @@ mvn tomcat:redeploy -Dnoload
 
 -------------------------------------------------------------------------------
 
-## To test: sign on with creds:
-* wssuperuser/password
+## Testing the wicket-sample app
+
+1. Here is the security policy
+
+ ![wicket-sample security policy](src/main/javadoc/doc-files/wicket-sample-security-policy)
+
+2. Enter the following URL:  http://localhost:8080/wicket-sample
+
+3. Use the following cred:
+
+ * wssuperuser/password
    ![SuperUser](src/main/javadoc/doc-files/Screenshot-wicket-sample-wssuperuser-small.png "Super User")
 
 
-* wsuser1/password
+ * wsuser1/password
    ![WsUser1](src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser1-small.png "WsUser1")
 
 
-* wsuser2/password
+ * wsuser2/password
    ![WsUser2](src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser2-small.png "WsUser2")
 
 
-* wsuser3/password
+ * wsuser3/password
    ![WsUser3](src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser3-small.png "WsUser3")
