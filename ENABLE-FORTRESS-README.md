@@ -39,7 +39,7 @@
 
  ![java EE login page](src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser1-login.png "java EE loging page")
 
-3. Edit the pom.xml
+3. Edit the [pom.xml](pom.xml)
 
  Prepare maven for fortress.
   * uncomment the dependencies near the top
@@ -90,7 +90,7 @@
  ```
  At the completion of this step, the necessary binaries will be available to the app and the app’s security policy file will be ready to load.
 
-4. Edit the web.xml
+4. Edit the [web.xml](src/main/webapp/WEB-INF/web.xml)
 
  Prepare the app for fortress.
   * uncomment the spring settings
@@ -193,7 +193,7 @@
  ```
 
 
-5. Rename context.xml.example to context.xml
+5. Rename [context.xml.example](src/main/resources/META-INF/context.xml.example) to context.xml
 
  Prepare the app for the fortress realm.
  ```xml
@@ -221,7 +221,7 @@
  classloader issues.  The proxy offers the flexibility for each web app to determine its own version/type of security realm to use, satisfying a variety of requirements
  related to web hosting and multitenancy.
 
-6. Rename fortress.properties.example to fortress.properties.
+6. Rename [fortress.properties.example](src/main/resources/fortress.properties.example) to fortress.properties.
 
  Prepare fortress for ldap server usage.
 
@@ -257,7 +257,7 @@ ehcache.config.file=ehcache.xml
 
  After completing the fortress ten minute guide, this step should be familiar to you.  It is where the fortress runtime is connected with a remote ldap server.
 
-7. Edit WicketApplication.java
+7. Edit [WicketApplication.java](src/main/resources/org/wicketsample/WicketApplication.java)
 
  Tell wicket about fortress sessions and objects.
     * uncomment fortress session override
@@ -282,7 +282,7 @@ ehcache.config.file=ehcache.xml
 
  These steps are necessary to get fortress hooked into the sample app.
 
-8. Edit WicketSampleBasePage.java
+8. Edit [WicketSampleBasePage.java](src/main/resources/org/wicketsample/WicketSampleBasePage.java)
 
  Get fortress objects injected to the wicket base page, enable fortress secured page links.
     * uncomment fortress spring bean injection
@@ -324,7 +324,7 @@ ehcache.config.file=ehcache.xml
 
  This component maps a page link to a fortress permission.  The wicket id passed in, e.g. page1.link, is converted to a fortress permission, objName: page1, opName: link.
 
-9. Edit Page1.java, Page2.java, Page3.java
+9. Edit [Page1.java](src/main/resources/org/wicketsample/Page1.java), [Page2.java](src/main/resources/org/wicketsample/Page2.java), [Page3.java](src/main/resources/org/wicketsample/Page3.java)
 
  Enable fortress secured buttons.  Each page has three buttons.  Same as before, only the name changes.
     * change to FtIndicatingAjaxButton
