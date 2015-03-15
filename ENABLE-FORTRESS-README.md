@@ -65,7 +65,8 @@
  This component maps the page buttons to fortress permissions
 
 10. Build & Deploy (run from the command line):
- * This step builds the web app, loads the wicket sample security policy into ldap, and deploys to tomcat:
+
+ This step builds the web app, loads the wicket sample security policy into ldap, and deploys to tomcat:
 ```
 mvn clean tomcat:deploy
 ```
