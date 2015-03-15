@@ -181,11 +181,11 @@
 
  ```xml
  <security-constraint>
-   <web-resource-collection>
-   <web-resource-name>app</web-resource-name>
-     <url-pattern>/wicket/bookmarkable/org.wicketsample.LogoutPage</url-pattern>
-   </web-resource-collection>
-   <!-- OMIT auth-constraint -->
+    <web-resource-collection>
+        <web-resource-name>app</web-resource-name>
+        <url-pattern>/wicket/bookmarkable/org.wicketsample.LogoutPage</url-pattern>
+    </web-resource-collection>
+    <!-- OMIT auth-constraint -->
  </security-constraint>
  ```
 
