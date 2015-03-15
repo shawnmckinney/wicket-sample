@@ -66,7 +66,8 @@
 
 ```
 
-    * uncomment the maven ant task near the bottom
+
+  * uncomment the maven ant task near the bottom
 ```
 ...
     <plugin>
