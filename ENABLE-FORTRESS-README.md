@@ -39,7 +39,7 @@
 
 3. Edit the pom.xml
   * uncomment the dependencies near the top
-  ```
+  ```maven
         ...
         <!-- TODO STEP 3: uncomment for fortress & security dependencies: -->
         <dependency>
@@ -69,7 +69,7 @@
         ...
   ```
   * uncomment the maven ant task near the bottom
-  ```
+  ```maven
     ...
     <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
@@ -85,7 +85,7 @@
 
 4. Edit the web.xml
   * uncomment the spring settings
- ```
+ ```xml
   <!-- TODO STEP 4a: uncomment to enable fortress spring bean injection: -->
   <context-param>
       <param-name>contextConfigLocation</param-name>
@@ -98,7 +98,7 @@
 
  ```
   * uncomment the java ee security constraints
- ```
+ ```xml
     ...
     <!-- TODO STEP 4b: uncomment to enable Java EE Security -->
     <security-constraint>
@@ -149,23 +149,23 @@
  After this step, java EE security has been enabled.
 
 5. Rename context.xml.example to context.xml
-```
-<Context reloadable="true">
+ ```xml
+    <Context reloadable="true">
 
-    <Realm className="org.apache.directory.fortress.realm.tomcat.Tc7AccessMgrProxy"
-           debug="0"
-           resourceName="UserDatabase"
-           defaultRoles=""
-           containerType="TomcatContext"
-           realmClasspath=""
-            />
-</Context>
-```
+        <Realm className="org.apache.directory.fortress.realm.tomcat.Tc7AccessMgrProxy"
+               debug="0"
+               resourceName="UserDatabase"
+               defaultRoles=""
+               containerType="TomcatContext"
+               realmClasspath=""
+                />
+    </Context>
+ ```
 
  The context.xml is how the fortress realm integrates with the sample wicket application.
 
 6. Rename fortress.properties.example to fortress.properties.
-```
+ ```
 # This param tells fortress what type of ldap server in use:
 ldap.server.type=apacheds
 
@@ -192,47 +192,45 @@ perms.cached=true
 
 # Fortress uses a cache:
 ehcache.config.file=ehcache.xml
-```
-
+ ```
 
  After completing the fortress ten minute guide, this step should be familiar to you.  It is where the fortress runtime is connected with a remote ldap server.
 
 7. Edit WicketApplication.java
     * uncomment fortress session override
-```
+ ```
 	// TODO STEP 7a: uncomment save fortress session to wicket session:
 	@Override
 	public Session newSession(Request request, Response response)
 	{
 		return new WicketSession(request);
 	}
-```
-
+ ```
 
     * uncomment fortress spring bean injector
-```
+ ```
     // TODO STEP 7b: uncomment to enable injection of fortress spring beans:
     getComponentInstantiationListeners().add(new SpringComponentInjector(this));
-```
+ ```
 
 
  These steps are necessary to get fortress hooked into the sample app.
 
 8. Edit WicketSampleBasePage.java
     * uncomment fortress spring bean injection
-```
+ ```java
     // TODO STEP 8a: enable spring injection of fortress bean here:
     @SpringBean
     private AccessMgr accessMgr;
     @SpringBean
     private J2eePolicyMgr j2eePolicyMgr;
 
-```
+ ```
 
      These beans are how the app calls fortress
 
     * uncomment call to enableFortress
-```
+ ```java
     // TODO STEP 8b: uncomment call to enableFortress:
     try
     {
@@ -243,28 +241,28 @@ ehcache.config.file=ehcache.xml
         String error = "WicketSampleBasePage caught security exception : " + se;
         LOG.warn( error );
     }
-```
+ ```
 
 
      Needed to manage the sessions on behalf of the users.
 
     * change to FtBookmarkablePageLink
-```
+ ```java
         // TODO STEP 8c: change to FtBookmarkablePageLink:
         add( new FtBookmarkablePageLink( "page1.link", Page1.class ) );
         add( new FtBookmarkablePageLink( "page2.link", Page2.class ) );
         add( new FtBookmarkablePageLink( "page3.link", Page3.class ) );
-```
+ ```
 
 
  This component maps the page links to fortress permissions.
 
 9. Edit Page1.java, Page2.java, Page3.java
     * change to FtIndicatingAjaxButton
-```
+ ```java
     // TODO STEP 9a: change to FtIndicatingAjaxButton:
     add( new FtIndicatingAjaxButton( "page1.button1" )
-```
+ ```
 
 
  This component maps the page buttons to fortress permissions
@@ -272,9 +270,9 @@ ehcache.config.file=ehcache.xml
 10. Build & Deploy (run from the command line):
 
  Build the web app, loads the wicket sample security policy into ldap, and deploy into tomcat:
-```
+ ```maven
 mvn clean tomcat:deploy
-```
+ ```
 -------------------------------------------------------------------------------
 
 ## To test: sign on with creds:
