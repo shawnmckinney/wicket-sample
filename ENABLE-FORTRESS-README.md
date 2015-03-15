@@ -17,11 +17,11 @@
 
 1. Add the static /login html files
 
- If you downloaded the wicket-sample source, this is already taken care of.
+ * If you downloaded the wicket-sample source, this is already taken care of.
 
 2. Add LoginPage, LogoutPage java and html
 
- Again these are already part of the wicket-sample source distro.
+ * sAgain these are already part of the wicket-sample source distro.
 
 3. Edit the pom.xml
     * uncomment the dependencies near the top
