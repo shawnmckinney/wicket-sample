@@ -363,7 +363,7 @@ mvn tomcat:redeploy -Dnoload
 
 1. Here is the security policy
 
- ![wicket-sample security policy](src/main/javadoc/doc-files/wicket-sample-security-policy)
+ ![wicket-sample security policy](src/main/javadoc/doc-files/wicket-sample-security-policy.gif)
 
 2. Enter the following URL:  http://localhost:8080/wicket-sample
 
