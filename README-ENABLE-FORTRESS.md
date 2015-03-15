@@ -25,7 +25,7 @@
 
 -------------------------------------------------------------------------------
 
-## Instructions for enabling security inside wicket-sample app:
+## Instructions for enabling security inside wicket-sample app
 
 1. Completion of steps in wicket-sample [README.md](README.md)
 
