@@ -28,7 +28,7 @@ mvn clean tomcat:deploy
  *Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps*
 
 -------------------------------------------------------------------------------
-## How to test wicket-sample app:
+## How to test wicket-sample app
 1. Point your web browser to the following location: [wicket sample home page](http://localhost:8080/wicket-sample)
 
 2. click on the page links
