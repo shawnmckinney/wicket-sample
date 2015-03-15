@@ -20,4 +20,5 @@ mvn clean tomcat:deploy
 6. Point your web browser to the following location: [wicket sample home page](http://localhost:8080/wicket-sample)
 
  Click on the links, buttons.  There is no security enabled for this app.
+
 7. To enable security, follow the instructions here: [ENABLE-FORTRESS-README.md](ENABLE-FORTRESS-README.md)
