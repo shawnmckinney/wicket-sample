@@ -37,8 +37,47 @@
 
 3. Edit the pom.xml
     * uncomment the dependencies near the top
-    * uncomment the maven ant task near the bottom
+```
+        <!-- TODO STEP 3: uncomment for fortress & security dependencies: -->
+        <dependency>
+            <groupId>org.apache.directory</groupId>
+            <artifactId>fortress-web</artifactId>
+            <version>${project.version}</version>
+            <classifier>classes</classifier>
+        </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>1.4.01</version>
+        </dependency>
+
+```
+    * uncomment the maven ant task near the bottom
+```
+...
+    <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+            <execution>
+                <phase>test</phase>
+                <configuration>
+                    <target name="fortress-load"
+...
+```
  Now the necessary binaries will be available to the app.
 
 4. Edit the web.xml
