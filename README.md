@@ -1,5 +1,6 @@
 # wicket-sample README
-This document demonstrates how to obtain, build and deploy the wicket sample without security enabled.
+
+ This document demonstrates how to obtain, build and deploy the wicket sample without security enabled.
 
 ![wicket sample no security](src/main/javadoc/doc-files/Screenshot-wicket-sample-nosecurity.png "No Secrity")
 -------------------------------------------------------------------------------
