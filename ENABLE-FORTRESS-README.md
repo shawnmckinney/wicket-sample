@@ -1,4 +1,7 @@
 # wicket-sample ENABLE FORTRESS README
+
+![Alt text](/src/main/javadoc/doc-files "")
+
 ## Prerequisites for target machine:
 1. Debian or Redhat Liunx machine with OpenSSL installed.
 2. Java 7 (or greater) sdk
@@ -75,7 +78,7 @@ mvn clean tomcat:deploy
 
 ## To test: sign on with creds:
 
-    * wssuperuser/password
-    * wsuser1/password
-    * wsuser2/password
-    * wsuser3/password
+    * wssuperuser/password - ![SuperUser](/src/main/javadoc/doc-files/Screenshot-wicket-sample-wssuperuser.png "Super User")
+    * wsuser1/password - ![WsUser1](/src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser1-small.png "WsUser1")
+    * wsuser2/password - ![WsUser2](/src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser2-small.png "WsUser2")
+    * wsuser3/password - ![WsUser3](/src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser3-small.png "WsUser3")
