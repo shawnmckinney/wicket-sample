@@ -165,7 +165,7 @@
  The context.xml is how the fortress realm integrates with the sample wicket application.
 
 6. Rename fortress.properties.example to fortress.properties.
- ```
+ ```properties
 # This param tells fortress what type of ldap server in use:
 ldap.server.type=apacheds
 
@@ -198,7 +198,7 @@ ehcache.config.file=ehcache.xml
 
 7. Edit WicketApplication.java
     * uncomment fortress session override
- ```
+ ```java
 	// TODO STEP 7a: uncomment save fortress session to wicket session:
 	@Override
 	public Session newSession(Request request, Response response)
@@ -208,7 +208,7 @@ ehcache.config.file=ehcache.xml
  ```
 
     * uncomment fortress spring bean injector
- ```
+ ```java
     // TODO STEP 7b: uncomment to enable injection of fortress spring beans:
     getComponentInstantiationListeners().add(new SpringComponentInjector(this));
  ```
