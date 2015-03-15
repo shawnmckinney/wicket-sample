@@ -1,12 +1,12 @@
 # wicket-sample README
 
 ![wicket sample no security](src/main/javadoc/doc-files/Screenshot-wicket-sample-nosecurity.png "No Secrity")
-
+-------------------------------------------------------------------------------
 ## Prerequisites for target machine:
 1. Java 7 (or greater) sdk
 2. Apache Maven 3
 3. Apache Tomcat 7 or greater
-
+-------------------------------------------------------------------------------
 ## Instructions for building deploying wicket-sample app to tomcat server:
 1. Download wicket-sample from github: [Download ZIP](https://github.com/shawnmckinney/wicket-sample/archive/master.zip)
 2. Extract the zip archive to your local machine.
