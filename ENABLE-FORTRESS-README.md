@@ -50,6 +50,7 @@ Af the completion of this step, java EE security has been enabled.
 mvn clean tomcat:deploy
 ```
     This step builds the web app, loads the wicket sample security policy into ldap, and deploys to tomcat.
+```
 11. To test: sign on with creds:
     * wssuperuser/password
     * wsuser1/password
