@@ -1,5 +1,5 @@
 # wicket-sample ENABLE FORTRESS README
-
+-------------------------------------------------------------------------------
 
 ## Prerequisites for target machine:
 1. Debian or Redhat Liunx machine with OpenSSL installed.
@@ -19,6 +19,7 @@
     * [Build Apache Fortress Realm](http://symas.com/javadocs/apache-fortress-core/org/apache/directory/fortress/core/doc-files/apache-fortress-realm.html)
     * [Setup Apache Tomcat Web Server](http://symas.com/javadocs/apache-fortress-core/org/apache/directory/fortress/core/doc-files/apache-tomcat.html)
     * [Build Apache Fortress Web](http://symas.com/javadocs/apache-fortress-core/org/apache/directory/fortress/core/doc-files/apache-fortress-web.html)
+-------------------------------------------------------------------------------
 
 ## Steps to enable java EE and fortress security:
 
