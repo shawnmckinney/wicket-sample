@@ -85,9 +85,11 @@
                     <target name="fortress-load"
     ...
  ```
- Now the necessary binaries will be available to the app.
+ At the completion of this step, the necessary binaries will be available to the app and the app’s security policy file will be ready to load.
 
 4. Edit the web.xml
+
+ Prepare the app for fortress.
   * uncomment the spring settings
  ```xml
   <!-- TODO STEP 4a: uncomment to enable fortress spring bean injection: -->
