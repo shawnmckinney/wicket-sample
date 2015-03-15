@@ -33,11 +33,12 @@
 
  * If you downloaded the wicket-sample source, this is already taken care of.
 
-2. Add LoginPage, LogoutPage java and html
-
- * Again these are already part of the wicket-sample source distro.
+2.  Add the Java EE security required artifacts
+ If you are using the wicket-sample source, this is already done.  It includes wicket components LoginPage.java, LogoutPage.java (plus associated markup files LoginPage.html, LogoutPage.html),
+ and the static html files under the /login folder.  These files control the flow between the container and wicket with java EE security enabled.
 
 3. Edit the pom.xml
+ Prepare maven for fortress.
   * uncomment the dependencies near the top
   ```maven
         ...
@@ -69,6 +70,8 @@
         ...
   ```
   * uncomment the maven ant task near the bottom
+This plugin calls the fortress load procedure during normal maven tasks like install or deploy.  The fortress load inserts the app’s security policy into ldap.
+It can be overridden by passing param -Dnoload which tells the plugin not to execute.
   ```maven
     ...
     <plugin>
