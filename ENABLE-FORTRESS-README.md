@@ -97,6 +97,30 @@
   </listener>
 
  ```
+ Notice a reference to spring's context file: [ApplicationContext.xml](src/main/resources/applicationContext.xml).
+ It file holds the metadata necessary to wire the fortress objects in with their constructors and subsequently get injected into the web app as spring beans.
+ ```xml
+ <?xml version="1.0" encoding="UTF-8"?>
+ <beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+     <!-- The Fortress Access Manager bean used for IAM -->
+     <bean id="accessMgr" class="org.apache.directory.fortress.core.AccessMgrFactory" scope="prototype"
+           factory-method="createInstance">
+         <constructor-arg value="HOME"/>
+     </bean>
+     <!-- The Fortress Realm J2EE Manager bean used for deserializing the principal as returned from tomcat -->
+     <bean id="j2eePolicyMgr" class="org.apache.directory.fortress.realm.J2eePolicyMgrFactory" scope="prototype"
+           factory-method="createInstance">
+     </bean>
+
+ </beans>
+ ```
+
   * uncomment the java ee security constraints
  ```xml
     ...
