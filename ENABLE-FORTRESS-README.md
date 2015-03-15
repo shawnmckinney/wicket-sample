@@ -66,7 +66,7 @@
 
 10. Build & Deploy (run from the command line):
 
- This step builds the web app, loads the wicket sample security policy into ldap, and deploys to tomcat:
+ Build the web app, loads the wicket sample security policy into ldap, and deploy into tomcat:
 ```
 mvn clean tomcat:deploy
 ```
