@@ -257,7 +257,7 @@ ehcache.config.file=ehcache.xml
 
  After completing the fortress ten minute guide, this step should be familiar to you.  It is where the fortress runtime is connected with a remote ldap server.
 
-7. Edit [WicketApplication.java](src/main/resources/org/wicketsample/WicketApplication.java)
+7. Edit [WicketApplication.java](src/main/java/org/wicketsample/WicketApplication.java)
 
  Tell wicket about fortress sessions and objects.
     * uncomment fortress session override
@@ -282,7 +282,7 @@ ehcache.config.file=ehcache.xml
 
  These steps are necessary to get fortress hooked into the sample app.
 
-8. Edit [WicketSampleBasePage.java](src/main/resources/org/wicketsample/WicketSampleBasePage.java)
+8. Edit [WicketSampleBasePage.java](src/main/java/org/wicketsample/WicketSampleBasePage.java)
 
  Get fortress objects injected to the wicket base page, enable fortress secured page links.
     * uncomment fortress spring bean injection
@@ -324,7 +324,7 @@ ehcache.config.file=ehcache.xml
 
  This component maps a page link to a fortress permission.  The wicket id passed in, e.g. page1.link, is converted to a fortress permission, objName: page1, opName: link.
 
-9. Edit [Page1.java](src/main/resources/org/wicketsample/Page1.java), [Page2.java](src/main/resources/org/wicketsample/Page2.java), [Page3.java](src/main/resources/org/wicketsample/Page3.java)
+9. Edit [Page1.java](src/main/java/org/wicketsample/Page1.java), [Page2.java](src/main/java/org/wicketsample/Page2.java), [Page3.java](src/main/java/org/wicketsample/Page3.java)
 
  Enable fortress secured buttons.  Each page has three buttons.  Same as before, only the name changes.
     * change to FtIndicatingAjaxButton
