@@ -38,7 +38,7 @@
  * Again these are already part of the wicket-sample source distro.
 
 3. Edit the pom.xml
-    * uncomment the dependencies near the top
+  * uncomment the dependencies near the top
         ...
         <!-- TODO STEP 3: uncomment for fortress & security dependencies: -->
         <dependency>
@@ -66,7 +66,7 @@
             <version>1.4.01</version>
         </dependency>
         ...
-    * uncomment the maven ant task near the bottom
+  * uncomment the maven ant task near the bottom
     ...
     <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
