@@ -21,7 +21,7 @@
 
 2. Add LoginPage, LogoutPage java and html
 
- * sAgain these are already part of the wicket-sample source distro.
+ * Again these are already part of the wicket-sample source distro.
 
 3. Edit the pom.xml
     * uncomment the dependencies near the top
@@ -68,7 +68,7 @@
 ```
 mvn clean tomcat:deploy
 ```
-This step builds the web app, loads the wicket sample security policy into ldap, and deploys to tomcat.
+ * This step builds the web app, loads the wicket sample security policy into ldap, and deploys to tomcat.
 -------------------------------------------------------------------------------
 
 To test: sign on with creds:
