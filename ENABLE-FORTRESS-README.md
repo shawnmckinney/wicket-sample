@@ -277,6 +277,7 @@ ehcache.config.file=ehcache.xml
  ```
 
     * uncomment fortress spring bean injector
+
  Next we tell the app to use spring to inject references to fortress security objects:
  ```java
     // TODO STEP 7b: uncomment to enable injection of fortress spring beans:
@@ -301,6 +302,7 @@ ehcache.config.file=ehcache.xml
  These objects are used by the app to make AccessMgr calls to functions like checkAccess and sessionPermissions.
 
     * uncomment call to enableFortress
+
  This performs the boilerplate security functions required by fortress during app session startup:
  ```java
     // TODO STEP 8b: uncomment call to enableFortress:
@@ -315,6 +317,7 @@ ehcache.config.file=ehcache.xml
     }
  ```
     * change to FtBookmarkablePageLink
+
  The advantage here is other than a name change, everything else stays the same, and now the links are secured.
  ```java
         // TODO STEP 8c: change to FtBookmarkablePageLink:
