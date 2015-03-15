@@ -69,6 +69,7 @@
         ...
   ```
   * uncomment the maven ant task near the bottom
+  ```
     ...
     <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
@@ -79,12 +80,12 @@
                 <configuration>
                     <target name="fortress-load"
     ...
-
+ ```
  Now the necessary binaries will be available to the app.
 
 4. Edit the web.xml
   * uncomment the spring settings
-```
+ ```
   <!-- TODO STEP 4a: uncomment to enable fortress spring bean injection: -->
   <context-param>
       <param-name>contextConfigLocation</param-name>
@@ -95,9 +96,10 @@
       <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
-```
+ ```
   * uncomment the java ee security constraints
-```
+ ```
+    ...
     <!-- TODO STEP 4b: uncomment to enable Java EE Security -->
     <security-constraint>
         <web-resource-collection>
@@ -140,7 +142,8 @@
         <error-code>500</error-code>
         <location>/login/unexpected.html</location>
     </error-page>
-```
+    ...
+ ```
 
 
  After this step, java EE security has been enabled.
