@@ -222,6 +222,7 @@ ehcache.config.file=ehcache.xml
     // TODO STEP 8a: enable spring injection of fortress bean here:
     @SpringBean
     private AccessMgr accessMgr;
+
     @SpringBean
     private J2eePolicyMgr j2eePolicyMgr;
 
