@@ -39,6 +39,7 @@
 
 3. Edit the pom.xml
   * uncomment the dependencies near the top
+  ```
         ...
         <!-- TODO STEP 3: uncomment for fortress & security dependencies: -->
         <dependency>
@@ -66,6 +67,7 @@
             <version>1.4.01</version>
         </dependency>
         ...
+  ```
   * uncomment the maven ant task near the bottom
     ...
     <plugin>
@@ -94,8 +96,6 @@
   </listener>
 
 ```
-
-
   * uncomment the java ee security constraints
 ```
     <!-- TODO STEP 4b: uncomment to enable Java EE Security -->
