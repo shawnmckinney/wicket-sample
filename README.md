@@ -16,7 +16,8 @@
 ```
 mvn clean tomcat:deploy
 ```
-[Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps]
+
+ * [Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps]
 
 6. Point your web browser to the following location: [wicket sample home page](http://localhost:8080/wicket-sample)
 
