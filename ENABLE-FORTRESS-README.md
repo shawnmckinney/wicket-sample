@@ -98,7 +98,7 @@
 
  ```
  Notice a reference to spring's context file: [ApplicationContext.xml](src/main/resources/applicationContext.xml).
- It file holds the metadata necessary to wire the fortress objects in with their constructors and subsequently get injected into the web app as spring beans.
+ It holds the metadata necessary to wire the fortress objects in with their constructors and subsequently get injected into the web app as spring beans.
  ```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <beans xmlns="http://www.springframework.org/schema/beans"
