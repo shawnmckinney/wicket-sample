@@ -23,7 +23,7 @@
 ```
 mvn clean tomcat:deploy
 ```
- [Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps]
+ *Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps*
 
 -------------------------------------------------------------------------------
 ## How to test wicket-sample app:
@@ -33,7 +33,7 @@ mvn clean tomcat:deploy
 
 3. click on the buttons
 
-4. Notice that there is no security enabled for this app.
+4. *Notice that there is no security enabled for this app*
 
 -------------------------------------------------------------------------------
 ## How to enable security in wicket-sample app:
