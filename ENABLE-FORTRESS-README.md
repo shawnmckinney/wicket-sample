@@ -27,7 +27,7 @@
 
 -------------------------------------------------------------------------------
 
-## Steps to enable java EE and fortress security:
+## Instructions for enabling security inside wicket-sample app:
 
 1. Add the static /login html files
 
@@ -359,15 +359,15 @@ mvn tomcat:redeploy -Dnoload
 
 -------------------------------------------------------------------------------
 
-## Testing the wicket-sample app
+## How to test the wicket sample with security enabled
 
-1. Here is the security policy
+1. Here is the user to role assignments:
 
  ![wicket-sample security policy](src/main/javadoc/doc-files/wicket-sample-security-policy.gif)
 
-2. Enter the following URL:  http://localhost:8080/wicket-sample
+2. Point your web browser to the following location: ![wicket-sample home page](http://localhost:8080/wicket-sample)
 
-3. Use the following cred:
+3. Use the following creds:
 
  * wssuperuser/password
    ![SuperUser](src/main/javadoc/doc-files/Screenshot-wicket-sample-wssuperuser-small.png "Super User")
@@ -383,3 +383,9 @@ mvn tomcat:redeploy -Dnoload
 
  * wsuser3/password
    ![WsUser3](src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser3-small.png "WsUser3")
+
+4. click on the page links
+
+5. click on the buttons
+
+6. Notice that security is now enabled, and how each user has different access rights.
