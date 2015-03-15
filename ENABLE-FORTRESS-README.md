@@ -73,7 +73,7 @@ mvn clean tomcat:deploy
 -------------------------------------------------------------------------------
 
 
-To test: sign on with creds:
+## To test: sign on with creds:
 
     * wssuperuser/password
     * wsuser1/password
