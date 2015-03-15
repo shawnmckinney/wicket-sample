@@ -43,7 +43,7 @@
 
  Prepare maven for fortress.
   * uncomment the dependencies near the top
-  ```maven
+  ```xml
         ...
         <!-- TODO STEP 3: uncomment for fortress & security dependencies: -->
         <dependency>
@@ -76,7 +76,7 @@
 
  This plugin calls the fortress load procedure during normal maven tasks like install or deploy.  The fortress load inserts the app’s security policy into ldap.
  The dataload can be switched off by passing param -Dnoload which tells the plugin not to execute.
-  ```maven
+  ```xml
     ...
     <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
