@@ -19,12 +19,12 @@ mvn clean tomcat:deploy
  [Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps]
 
 -------------------------------------------------------------------------------
-## Instructions for testing wicket-sample app:
+## How to test wicket-sample app:
 1. Point your web browser to the following location: [wicket sample home page](http://localhost:8080/wicket-sample)
 2. click on the page links
 3. click on the buttons
 4. Notice that there is no security enabled for this app.
 
 -------------------------------------------------------------------------------
-## Instructions for enabling security in wicket-sample app:
+## How to enable security in wicket-sample app:
  Follow the instructions here: [ENABLE-FORTRESS-README.md](ENABLE-FORTRESS-README.md)
