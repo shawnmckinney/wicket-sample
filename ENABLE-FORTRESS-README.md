@@ -208,9 +208,7 @@ Prepare the app for the fortress realm.
 
  This file hooks a web app into the tomcat fortress realm which performs security functions like authenticate and isUserInRole.
  It’s also where the security session gets created by fortress.
-
 ###more on the realm
-
  The fortress realm’s proxy jar must be present under tomcat’s lib folder
  (as discussed in the [Apache Fortress Ten Minute Guide](http://symas.com/javadocs/apache-fortress-core/org/apache/directory/fortress/core/doc-files/ten-minute-guide.html)).
 
