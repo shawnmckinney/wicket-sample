@@ -86,7 +86,7 @@
  Now the necessary binaries will be available to the app.
 
 4. Edit the web.xml
-    * uncomment the spring settings
+  * uncomment the spring settings
 ```
   <!-- TODO STEP 4a: uncomment to enable fortress spring bean injection: -->
   <context-param>
@@ -97,10 +97,11 @@
   <listener>
       <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
+
 ```
 
 
-    * uncomment the java ee security constraints
+  * uncomment the java ee security constraints
 ```
     <!-- TODO STEP 4b: uncomment to enable Java EE Security -->
     <security-constraint>
