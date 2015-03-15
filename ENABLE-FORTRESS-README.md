@@ -219,6 +219,9 @@
  related to web hosting and multitenancy.
 
 6. Rename fortress.properties.example to fortress.properties.
+ Prepare fortress for ldap server usage.
+
+ After completing the fortress ten minute guide, this step should be familiar to you.  It is how the fortress runtime gets hooked in with a remote ldap server.
  ```properties
 # This param tells fortress what type of ldap server in use:
 ldap.server.type=apacheds
@@ -251,7 +254,9 @@ ehcache.config.file=ehcache.xml
  After completing the fortress ten minute guide, this step should be familiar to you.  It is where the fortress runtime is connected with a remote ldap server.
 
 7. Edit WicketApplication.java
+ Tell wicket about fortress sessions and objects.
     * uncomment fortress session override
+ Here we override app’s wicket session with a new one that can hold onto fortress session and perms:
  ```java
 	// TODO STEP 7a: uncomment save fortress session to wicket session:
 	@Override
@@ -262,15 +267,16 @@ ehcache.config.file=ehcache.xml
  ```
 
     * uncomment fortress spring bean injector
+ Next we tell the app to use spring to inject references to fortress security objects:
  ```java
     // TODO STEP 7b: uncomment to enable injection of fortress spring beans:
     getComponentInstantiationListeners().add(new SpringComponentInjector(this));
  ```
 
-
  These steps are necessary to get fortress hooked into the sample app.
 
 8. Edit WicketSampleBasePage.java
+ Get fortress objects injected to the wicket base page, enable fortress secured page links.
     * uncomment fortress spring bean injection
  ```java
     // TODO STEP 8a: enable spring injection of fortress bean here:
@@ -281,10 +287,10 @@ ehcache.config.file=ehcache.xml
     private J2eePolicyMgr j2eePolicyMgr;
 
  ```
-
-     These beans are how the app calls fortress
+ These objects are used by the app to make AccessMgr calls to functions like checkAccess and sessionPermissions.
 
     * uncomment call to enableFortress
+ This performs the boilerplate security functions required by fortress during app session startup:
  ```java
     // TODO STEP 8b: uncomment call to enableFortress:
     try
@@ -297,11 +303,8 @@ ehcache.config.file=ehcache.xml
         LOG.warn( error );
     }
  ```
-
-
-     Needed to manage the sessions on behalf of the users.
-
     * change to FtBookmarkablePageLink
+ The advantage here is other than a name change, everything else stays the same, and now the links are secured.
  ```java
         // TODO STEP 8c: change to FtBookmarkablePageLink:
         add( new FtBookmarkablePageLink( "page1.link", Page1.class ) );
@@ -309,25 +312,36 @@ ehcache.config.file=ehcache.xml
         add( new FtBookmarkablePageLink( "page3.link", Page3.class ) );
  ```
 
-
- This component maps the page links to fortress permissions.
+ This component maps a page link to a fortress permission.  The wicket id passed in, e.g. page1.link, is converted to a fortress permission, objName: page1, opName: link.
 
 9. Edit Page1.java, Page2.java, Page3.java
+ Enable fortress secured buttons.  Each page has three buttons.  Same as before, only the name changes.
     * change to FtIndicatingAjaxButton
  ```java
     // TODO STEP 9a: change to FtIndicatingAjaxButton:
     add( new FtIndicatingAjaxButton( "page1.button1" )
  ```
 
-
- This component maps the page buttons to fortress permissions
+ This component maps the buttons to fortress permissions.  The wicket id, e.g. page1.button1, is converted to a fortress permission, objName: page1, opName: button1.
 
 10. Build & Deploy (run from the command line):
 
- Build the web app, loads the wicket sample security policy into ldap, and deploy into tomcat:
+ Deploy to tomcat server:
  ```maven
 mvn clean tomcat:deploy
  ```
+
+ Or if already deployed:
+ ```maven
+mvn clean tomcat:redeploy
+ ```
+
+ This step also loads the wicket sample security policy into ldap.  Since the load needs to happen just once, you can turn it off by passing a value of
+ -Dnoload on subsequent deployments:
+ ```maven
+mvn tomcat:redeploy -Dnoload
+ ```
+
 -------------------------------------------------------------------------------
 
 ## To test: sign on with creds:
