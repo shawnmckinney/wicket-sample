@@ -36,7 +36,7 @@
 2.  Add the Java EE security required artifacts
 
  If you are using the wicket-sample source, this is already done.  It includes wicket components
- [LoginPage.java](src/main/java/org/wicketsample/LoginPage.java), [LogoutPage.java]([src/main/java/org/wicketsample/LogoutPage.java)
+ [LoginPage.java](src/main/java/org/wicketsample/LoginPage.java), [LogoutPage.java](src/main/java/org/wicketsample/LogoutPage.java)
  (plus associated markup files [LoginPage.html](src/main/resources/org/wicketsample/LoginPage.html), [LogoutPage.html](src/main/resources/org/wicketsample/LogoutPage.html)),
  and the static html files under the [/login](src/main/webapp/login folder).  These files control the flow between the container and wicket with java EE security enabled.
 
