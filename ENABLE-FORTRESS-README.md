@@ -192,7 +192,7 @@
 
 5. Rename context.xml.example to context.xml
 
-Prepare the app for the fortress realm.
+ Prepare the app for the fortress realm.
  ```xml
     <Context reloadable="true">
 
