@@ -40,6 +40,7 @@
 3. Edit the pom.xml
     * uncomment the dependencies near the top
 ```
+...
         <!-- TODO STEP 3: uncomment for fortress & security dependencies: -->
         <dependency>
             <groupId>org.apache.directory</groupId>
@@ -65,9 +66,9 @@
             <artifactId>xml-apis</artifactId>
             <version>1.4.01</version>
         </dependency>
-
+...
 ```
-  * uncomment the maven ant task near the bottom
+    * uncomment the maven ant task near the bottom
 ```
 ...
     <plugin>
