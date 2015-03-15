@@ -70,8 +70,8 @@
         ...
   ```
   * uncomment the maven ant task near the bottom
-This plugin calls the fortress load procedure during normal maven tasks like install or deploy.  The fortress load inserts the app’s security policy into ldap.
-It can be overridden by passing param -Dnoload which tells the plugin not to execute.
+ This plugin calls the fortress load procedure during normal maven tasks like install or deploy.  The fortress load inserts the app’s security policy into ldap.
+ The dataload can be switched off by passing param -Dnoload which tells the plugin not to execute.
   ```maven
     ...
     <plugin>
