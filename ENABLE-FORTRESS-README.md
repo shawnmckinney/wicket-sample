@@ -65,6 +65,7 @@
         </dependency>
 
 ```
+
     * uncomment the maven ant task near the bottom
 ```
 ...
@@ -78,6 +79,7 @@
                     <target name="fortress-load"
 ...
 ```
+
  Now the necessary binaries will be available to the app.
 
 4. Edit the web.xml
