@@ -77,7 +77,7 @@ mvn clean tomcat:deploy
 
 ## To test: sign on with creds:
 * wssuperuser/password
-   ![SuperUser](src/main/javadoc/doc-files/Screenshot-wicket-sample-wssuperuser.png "Super User")
+   ![SuperUser](src/main/javadoc/doc-files/Screenshot-wicket-sample-wssuperuser-small.png "Super User")
 * wsuser1/password
    ![WsUser1](src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser1-small.png "WsUser1")
 * wsuser2/password
