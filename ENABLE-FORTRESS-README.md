@@ -40,6 +40,7 @@
  ![java EE login page](src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser1-login.png "java EE loging page")
 
 3. Edit the pom.xml
+
  Prepare maven for fortress.
   * uncomment the dependencies near the top
   ```maven
@@ -221,6 +222,7 @@
  related to web hosting and multitenancy.
 
 6. Rename fortress.properties.example to fortress.properties.
+
  Prepare fortress for ldap server usage.
 
  After completing the fortress ten minute guide, this step should be familiar to you.  It is how the fortress runtime gets hooked in with a remote ldap server.
@@ -256,6 +258,7 @@ ehcache.config.file=ehcache.xml
  After completing the fortress ten minute guide, this step should be familiar to you.  It is where the fortress runtime is connected with a remote ldap server.
 
 7. Edit WicketApplication.java
+
  Tell wicket about fortress sessions and objects.
     * uncomment fortress session override
  Here we override app’s wicket session with a new one that can hold onto fortress session and perms:
@@ -278,6 +281,7 @@ ehcache.config.file=ehcache.xml
  These steps are necessary to get fortress hooked into the sample app.
 
 8. Edit WicketSampleBasePage.java
+
  Get fortress objects injected to the wicket base page, enable fortress secured page links.
     * uncomment fortress spring bean injection
  ```java
@@ -317,6 +321,7 @@ ehcache.config.file=ehcache.xml
  This component maps a page link to a fortress permission.  The wicket id passed in, e.g. page1.link, is converted to a fortress permission, objName: page1, opName: link.
 
 9. Edit Page1.java, Page2.java, Page3.java
+
  Enable fortress secured buttons.  Each page has three buttons.  Same as before, only the name changes.
     * change to FtIndicatingAjaxButton
  ```java
