@@ -1,13 +1,17 @@
 # wicket-sample ENABLE FORTRESS README
 
-![Alt text](/src/main/javadoc/doc-files "")
 
 ## Prerequisites for target machine:
 1. Debian or Redhat Liunx machine with OpenSSL installed.
+
 2. Java 7 (or greater) sdk
+
 3. Git
+
 4. Apache Maven 3
+
 5. Firefox Web Browser
+
 6. Completion of the [Apache Fortress Ten Minute Guide](http://symas.com/javadocs/apache-fortress-core/org/apache/directory/fortress/core/doc-files/ten-minute-guide.html):
     * [Setup Apache Directory Server](http://symas.com/javadocs/apache-fortress-core/org/apache/directory/fortress/core/doc-files/apache-directory-server.html)
     * [Setup Apache Directory Studio](http://symas.com/javadocs/apache-fortress-core/org/apache/directory/fortress/core/doc-files/apache-directory-studio.html)
@@ -78,9 +82,12 @@ mvn clean tomcat:deploy
 ## To test: sign on with creds:
 * wssuperuser/password
    ![SuperUser](src/main/javadoc/doc-files/Screenshot-wicket-sample-wssuperuser-small.png "Super User")
+
 * wsuser1/password
    ![WsUser1](src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser1-small.png "WsUser1")
+
 * wsuser2/password
    ![WsUser2](src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser2-small.png "WsUser2")
+
 * wsuser3/password
    ![WsUser3](src/main/javadoc/doc-files/Screenshot-wicket-sample-wsuser3-small.png "WsUser3")
