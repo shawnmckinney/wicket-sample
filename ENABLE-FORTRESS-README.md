@@ -1,6 +1,7 @@
 # wicket-sample ENABLE FORTRESS README
 
  This document demonstrates how to enable java EE and fortress security in the wicket sample app.
+
 -------------------------------------------------------------------------------
 
 ## Prerequisites for target machine:
