@@ -29,7 +29,7 @@ mvn clean tomcat:deploy
 
 -------------------------------------------------------------------------------
 ## How to test
-1. Point your web browser to the following location: [wicket sample home page](http://localhost:8080/wicket-sample)
+1. Open link to [http://localhost:8080/wicket-sample(http://localhost:8080/wicket-sample)
 
 2. click on the page links
 
