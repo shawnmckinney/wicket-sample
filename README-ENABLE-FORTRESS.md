@@ -352,7 +352,7 @@ mvn tomcat:redeploy -Dnoload
 
 ## How to test with security enabled
 
-1. Here is the user to role assignments:
+1. Here are the user to role assignments:
 
  ![wicket-sample security policy](src/main/javadoc/doc-files/wicket-sample-security-policy.gif)
 
