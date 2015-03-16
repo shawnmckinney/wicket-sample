@@ -175,19 +175,6 @@
 
  Now container security has been enabled for this web app.  It authenticates, checks roles and maintains the session.
 
- The wicket logout page is excluded from java EE security constraints.  Otherwise, a problem occurs preventing unauthorized users from logging out.
-
- ```xml
- <security-constraint>
-    <web-resource-collection>
-        <web-resource-name>app</web-resource-name>
-        <url-pattern>/wicket/bookmarkable/org.wicketsample.LogoutPage</url-pattern>
-    </web-resource-collection>
-    <!-- OMIT auth-constraint -->
- </security-constraint>
- ```
-
-
 5. Rename [context.xml.example](src/main/resources/META-INF/context.xml.example) to context.xml
 
  Prepare the app for the fortress realm.
