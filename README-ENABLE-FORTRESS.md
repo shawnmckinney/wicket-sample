@@ -22,7 +22,7 @@
 
 ## Instructions for enabling security inside wicket-sample app
 
-1. Completion of steps in wicket-sample [README.md](README.md)
+1. Completion of [README.md](README.md)
 
 2.  Add the Java EE security required artifacts
 
