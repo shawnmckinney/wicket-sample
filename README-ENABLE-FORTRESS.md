@@ -134,7 +134,7 @@
             <web-resource-name>app</web-resource-name>
             <url-pattern>/wicket/bookmarkable/org.wicketsample.LogoutPage</url-pattern>
         </web-resource-collection>
-        &lt;!&ndash; OMIT auth-constraint &ndash;&gt;
+        <!-- OMIT auth-constraint -->
     </security-constraint>
     <security-constraint>
         <display-name>Wicket Sample Security Constraints</display-name>
