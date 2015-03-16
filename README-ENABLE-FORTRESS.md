@@ -6,7 +6,7 @@
 
 -------------------------------------------------------------------------------
 
-## Prerequisites for target environment:
+## Prerequisites for target environment
 1. Java 7 (or greater) sdk
 
 2. Git

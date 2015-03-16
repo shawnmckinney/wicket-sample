@@ -6,7 +6,7 @@
 
 ![wicket sample no security](src/main/javadoc/doc-files/Screenshot-wicket-sample-nosecurity.png "No Security")
 -------------------------------------------------------------------------------
-## Prerequisites for target machine:
+## Prerequisites for target machine
 1. Java 7 (or greater) sdk
 
 2. Apache Maven 3
