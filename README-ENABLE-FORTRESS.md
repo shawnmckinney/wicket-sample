@@ -6,7 +6,7 @@
 
 -------------------------------------------------------------------------------
 
-## Prerequisites for target environment
+## Prerequisites
 1. Java 7 (or greater) sdk
 2. Git
 3. Apache Maven 3
@@ -20,7 +20,7 @@
 
 -------------------------------------------------------------------------------
 
-## How to enable security inside wicket-sample app
+## How to enable security in this wicket app
 
 1. Completion of [README.md](README.md)
 

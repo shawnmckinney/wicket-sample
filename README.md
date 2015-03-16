@@ -29,7 +29,7 @@ mvn clean tomcat:deploy
 -------------------------------------------------------------------------------
 ## How to test
 1. Open link to [http://localhost:8080/wicket-sample](http://localhost:8080/wicket-sample)
- 
+
  ![wicket sample no security](src/main/javadoc/doc-files/Screenshot-wicket-sample-nosecurity.png "No Security")
 
 2. click on the page links
