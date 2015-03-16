@@ -20,7 +20,7 @@
 
 -------------------------------------------------------------------------------
 
-## Instructions for enabling security inside wicket-sample app
+## How to enable security inside wicket-sample app
 
 1. Completion of [README.md](README.md)
 
@@ -350,13 +350,13 @@ mvn tomcat:redeploy -Dnoload
 
 -------------------------------------------------------------------------------
 
-## How to test the wicket sample with security enabled
+## How to test with security enabled
 
 1. Here is the user to role assignments:
 
  ![wicket-sample security policy](src/main/javadoc/doc-files/wicket-sample-security-policy.gif)
 
-2. Point your web browser to the following location: [http://localhost:8080/wicket-sample](http://localhost:8080/wicket-sample)
+2. Open link to [http://localhost:8080/wicket-sample](http://localhost:8080/wicket-sample)
 
 3. Use the following creds:
 
