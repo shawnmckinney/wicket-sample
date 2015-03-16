@@ -6,13 +6,13 @@
 
 ![wicket sample no security](src/main/javadoc/doc-files/Screenshot-wicket-sample-nosecurity.png "No Security")
 -------------------------------------------------------------------------------
-## Prerequisites for target machine
+## Prerequisites
 1. Java 7 (or greater) sdk
 2. Apache Maven 3
 3. Apache Tomcat 7 or greater
 
 -------------------------------------------------------------------------------
-## How to build and deploy to tomcat
+## How to build and deploy
 1. [Download ZIP](https://github.com/shawnmckinney/wicket-sample/archive/master.zip)
 
 2. Extract the zip archive to your local machine.
@@ -28,7 +28,7 @@ mvn clean tomcat:deploy
  *Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps*
 
 -------------------------------------------------------------------------------
-## How to test wicket-sample app
+## How to test
 1. Point your web browser to the following location: [wicket sample home page](http://localhost:8080/wicket-sample)
 
 2. click on the page links
@@ -38,5 +38,5 @@ mvn clean tomcat:deploy
 4. *Notice that there is no security enabled for this app*
 
 -------------------------------------------------------------------------------
-## How to enable security in the wicket-sample app
+## How to enable security
  Follow the instructions here: [README-ENABLE-FORTRESS.md](README-ENABLE-FORTRESS.md)
