@@ -1,5 +1,7 @@
 # wicket-sample README-ENABLE-FORTRESS
 
+ Last updated: March 15, 2015
+
  This document demonstrates how to enable java EE and fortress security for the wicket sample app.
 
 -------------------------------------------------------------------------------
