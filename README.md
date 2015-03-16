@@ -12,7 +12,7 @@
 3. Apache Tomcat 7 or greater
 
 -------------------------------------------------------------------------------
-## How to building and deploy to tomcat
+## How to build and deploy to tomcat
 1. [Download ZIP](https://github.com/shawnmckinney/wicket-sample/archive/master.zip)
 
 2. Extract the zip archive to your local machine.
