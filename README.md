@@ -8,11 +8,8 @@
 -------------------------------------------------------------------------------
 ## Prerequisites for target machine
 1. Java 7 (or greater) sdk
-
 2. Apache Maven 3
-
 3. Apache Tomcat 7 or greater
-
 -------------------------------------------------------------------------------
 ## Instructions for building/deploying the wicket-sample app to tomcat
 1. Download wicket-sample from github: [Download ZIP](https://github.com/shawnmckinney/wicket-sample/archive/master.zip)
@@ -28,7 +25,6 @@
 mvn clean tomcat:deploy
 ```
  *Note: if problem  with auto-deploy, manually deploy wicket-sample.war to webapps*
-
 -------------------------------------------------------------------------------
 ## How to test wicket-sample app
 1. Point your web browser to the following location: [wicket sample home page](http://localhost:8080/wicket-sample)
@@ -38,7 +34,6 @@ mvn clean tomcat:deploy
 3. click on the buttons
 
 4. *Notice that there is no security enabled for this app*
-
 -------------------------------------------------------------------------------
 ## How to enable security in the wicket-sample app
  Follow the instructions here: [README-ENABLE-FORTRESS.md](README-ENABLE-FORTRESS.md)
