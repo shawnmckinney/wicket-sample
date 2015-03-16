@@ -356,7 +356,7 @@ mvn tomcat:redeploy -Dnoload
 
  ![wicket-sample security policy](src/main/javadoc/doc-files/wicket-sample-security-policy.gif)
 
-2. Point your web browser to the following location: ![wicket-sample home page](http://localhost:8080/wicket-sample)
+2. Point your web browser to the following location: [http://localhost:8080/wicket-sample](http://localhost:8080/wicket-sample)
 
 3. Use the following creds:
 
