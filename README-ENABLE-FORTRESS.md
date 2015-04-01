@@ -37,35 +37,16 @@
 3. Edit the [pom.xml](pom.xml)
 
  Prepare maven for fortress.
-  * uncomment the dependencies near the top
+  * uncomment the fortress web dependency at the top
   ```xml
         ...
-        <!-- TODO STEP 3: uncomment for fortress & security dependencies: -->
+        <!-- TODO STEP 3: uncomment for fortress security dependency: -->
         <dependency>
             <groupId>org.apache.directory</groupId>
             <artifactId>fortress-web</artifactId>
             <version>${project.version}</version>
             <classifier>classes</classifier>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-expression</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>xml-apis</groupId>
-            <artifactId>xml-apis</artifactId>
-            <version>1.4.01</version>
-        </dependency>
-        ...
   ```
   * uncomment the maven ant task near the bottom
 
