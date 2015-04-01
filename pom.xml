@@ -240,6 +240,7 @@
                 </configuration>
             </plugin>
 
+            <!-- TODO STEP 3: uncomment for auto loading of the wicket-sample security policy into ldap server: -->
 <!--
             <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
@@ -249,7 +250,7 @@
                         <phase>test</phase>
                         <configuration>
                             <target name="fortress-load"
-                                    unless="noload"
+                                    if="load.file"
                                     description="Loads wicket sample security policy into ldap">
                                 <echo message="###############  Run Fortress Ant script to load apache fortress demo policy  ###############"/>
                                 <java
@@ -296,6 +297,7 @@
                 </executions>
             </plugin>
 -->
+
         </plugins>
 
     </build>

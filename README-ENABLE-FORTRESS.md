@@ -321,18 +321,17 @@ ehcache.config.file=ehcache.xml
 
  Deploy to tomcat server:
  ```maven
-mvn clean tomcat:deploy
+mvn clean tomcat:deploy -Dload.file
  ```
 
  Or if already deployed:
  ```maven
-mvn clean tomcat:redeploy
+mvn clean tomcat:redeploy -Dload.file
  ```
 
- This step also loads the wicket sample security policy into ldap.  Since the load needs to happen just once, you can turn it off by passing a value of
- -Dnoload on subsequent deployments:
+  -Dload.file tells maven to also load the wicket sample security policy into ldap.  Since the load needs to happen just once, you may drop it from future ops:
  ```maven
-mvn tomcat:redeploy -Dnoload
+mvn tomcat:redeploy
  ```
 
 -------------------------------------------------------------------------------
