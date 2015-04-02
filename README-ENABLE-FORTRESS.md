@@ -218,8 +218,6 @@ perms.cached=true
 ehcache.config.file=ehcache.xml
  ```
 
- After completing the fortress ten minute guide, this step should be familiar to you.  It is where the fortress runtime is connected with a remote ldap server.
-
 7. Edit [WicketApplication.java](src/main/java/org/wicketsample/WicketApplication.java)
 
  Tell wicket about fortress sessions and objects.
