@@ -48,22 +48,6 @@
             <classifier>classes</classifier>
         </dependency>
   ```
-  * uncomment the maven ant task near the bottom
-
- This plugin calls the fortress load procedure during normal maven tasks like install or deploy.  The fortress load inserts the app’s security policy into ldap.
- The dataload can be switched off by passing param -Dnoload which tells the plugin not to execute.
-  ```xml
-    ...
-    <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <version>1.7</version>
-        <executions>
-            <execution>
-                <phase>test</phase>
-                <configuration>
-                    <target name="fortress-load"
-    ...
- ```
  At the completion of this step, the necessary binaries will be available to the app and the app’s security policy file will be ready to load.
 
 4. Edit the [web.xml](src/main/webapp/WEB-INF/web.xml)
