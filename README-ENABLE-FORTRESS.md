@@ -1,8 +1,12 @@
-# wicket-sample README-ENABLE-FORTRESS
+# Overview of the wicket-sample README-ENABLE-FORTRESS README
 
- Last updated: March 15, 2015
+ * This document demonstrates how to enable java EE and fortress security for the wicket sample app.
+ * The intent is to demonstrate how to combine Apache Fortress RBAC into an Apache Wicket web app.
+ * The intent is not a how-to guide for fortress security in java web envs.  For that look to [apache-fortress-demo](https://github.com/shawnmckinney/apache-fortress-demo)
+ * For more info about the wicket sample: [Link to Wicket Blog](https://iamfortress.net/2015/03/05/the-seven-steps-of-role-engineering/)
+ * Wicket Sample System Diagram
+ ![System Diagram](src/main/javadoc/doc-files/Wicket-Sample-Block-Diagram-Master.png "System Diagram")
 
- This document demonstrates how to enable java EE and fortress security for the wicket sample app.
 
 -------------------------------------------------------------------------------
 
@@ -19,6 +23,7 @@
     * [Build Apache Fortress Web](http://directory.apache.org/fortress/gen-docs/latest/apidocs/org/apache/directory/fortress/core/doc-files/apache-fortress-web.html)
 
 -------------------------------------------------------------------------------
+
 
 ## How to enable security in this wicket app
 
@@ -298,6 +303,72 @@ mvn tomcat:redeploy
  ```
 
 -------------------------------------------------------------------------------
+
+## Understand the security policy using RBAC
+
+To gain full understanding, check out the file used to load it into the LDAP directory: ![wicket-sample security policy](wicket-sample-security-policy.xml).
+
+App comprised of three pages, each has buttons and links that are guarded by permissions.  The permissions are granted to a particular user via their role assignments.
+
+For this app, user-to-role assignments are:
+### User-to-Role Assignment Table
+| user          | wsusers1role | wsusers2role | wsusers3role | wssuperrole  |
+| ------------- | ------------ | ------------ | ------------ | ------------ |
+| wsuser1       | true         | false        | false        | false        |
+| wsuser2       | true         | true         | false        | false        |
+| wsuser3       | false        | false        | true         | false        |
+| wssuperuser   | false        | false        | false        | true         |
+
+
+The  page roles inherit from a single parent which allow them into the app:
+### Role Inheritance Table
+| role name     | parent name   |
+| ------------- | ------------- |
+| wsusers1role  | wsBaseRole    |
+| wsusers2role  | wsBaseRole    |
+| wsusers3role  | wsBaseRole    |
+
+The superrole inherits from the page roles giving the assignee full access to all pages
+and buttons on the app.
+
+### Role Inheritance Table
+| role name    | parent name   |
+| ------------ | ------------- |
+| wssuperrole  | wsusers1role  |
+| wssuperrole  | wsusers2role  |
+| wssuperrole  | wsusers3role  |
+
+The page links use RBAC perms.
+
+User to Page access is granted as:
+### User-to-Page Access Table
+| user        | Page1 | Page2 | Page3 |
+| ----------- | ----- | ----- | ----- |
+| wsuser1     | true  | false | false |
+| wsuser2     | false | true  | false |
+| wsuser3     | false | false | true  |
+| wssuperuser | true  | true  | true  |
+
+The buttons are guarded by rbac permission checks.  The permissions are dependent on which roles are active.
+
+Below is the list of permissions by user.  These list can be returned using [sessionPermissions](https://directory.apache.org/fortress/gen-docs/latest/apidocs/org/apache/directory/fortress/core/AccessMgr.html#sessionPermissions(org.apache.directory.fortress.core.rbac.Session)) API.
+
+### User-to-Permission Access Table
+| permission    | wsuser1     | wsuser2     | wsuser3     | wssuperuser |
+| ------------- | ----------- | ----------- | ----------- | ----------- |
+| Page1.link    | true        | false       | false       | true        |
+| Page2.link    | false       | true        | false       | true        |
+| Page3.link    | false       | false       | truev       | true        |
+| Page1.Button1 | true        | false       | false       | true        |
+| Page1.Button2 | true        | false       | false       | true        |
+| Page1.Button3 | true        | false       | false       | true        |
+| Page2.Button1 | false       | true        | false       | true        |
+| Page2.Button2 | false       | true        | false       | true        |
+| Page2.Button3 | false       | true        | false       | true        |
+| Page3.Button1 | false       | false       | true        | true        |
+| Page3.Button2 | false       | false       | true        | true        |
+| Page3.Button3 | false       | false       | true        | true        |
+
 
 ## How to test with security enabled
 
