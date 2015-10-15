@@ -12,6 +12,7 @@ import org.apache.wicket.markup.html.link.Link;
 import javax.servlet.http.HttpServletRequest;
 
 /*
+import org.apache.directory.fortress.web.control.FtBookmarkablePageLink;
 import org.apache.directory.fortress.web.control.SecUtils;
 import org.apache.directory.fortress.core.AccessMgr;
 import org.apache.directory.fortress.realm.J2eePolicyMgr;
