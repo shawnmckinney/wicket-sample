@@ -26,7 +26,7 @@
     </filter-mapping>
 
 
-    <!-- TODO STEP 4a: uncomment to enable fortress spring bean injection: -->
+    <!-- TODO STEP 4a: uncomment to enable fortress spring bean injection && Java EE Security: -->
 <!--
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -37,7 +37,6 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
-    &lt;!&ndash; TODO STEP 4b: uncomment to enable Java EE Security: &ndash;&gt;
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>app</web-resource-name>
