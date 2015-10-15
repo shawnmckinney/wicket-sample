@@ -9,8 +9,15 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.link.Link;
-
 import javax.servlet.http.HttpServletRequest;
+
+/*
+import org.apache.directory.fortress.web.control.SecUtils;
+import org.apache.directory.fortress.core.AccessMgr;
+import org.apache.directory.fortress.realm.J2eePolicyMgr;
+import org.apache.wicket.spring.injection.annot.SpringBean;
+*/
+
 
 /**
  * Base class for wicketsample project.
@@ -20,8 +27,8 @@ import javax.servlet.http.HttpServletRequest;
  */
 public abstract class WicketSampleBasePage extends WebPage
 {
-/*
     // TODO STEP 8a: enable spring injection of fortress bean here:
+/*
     @SpringBean
     private AccessMgr accessMgr;
     @SpringBean
@@ -30,11 +37,12 @@ public abstract class WicketSampleBasePage extends WebPage
 
     public WicketSampleBasePage()
     {
-/*
         // TODO STEP 8b: uncomment call to enableFortress:
+/*
         try
         {
-            SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr, accessMgr );
+            SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr,
+                accessMgr );
         }
         catch (org.apache.directory.fortress.core.SecurityException se)
         {
