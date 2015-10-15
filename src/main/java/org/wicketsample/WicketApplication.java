@@ -6,7 +6,6 @@
  */
 package org.wicketsample;
 
-import org.apache.wicket.Session;
 import org.apache.wicket.core.request.handler.PageProvider;
 import org.apache.wicket.core.request.handler.RenderPageRequestHandler;
 import org.apache.wicket.markup.html.WebPage;
@@ -16,7 +15,10 @@ import org.apache.wicket.request.Request;
 import org.apache.wicket.request.Response;
 import org.apache.wicket.request.cycle.AbstractRequestCycleListener;
 import org.apache.wicket.request.cycle.RequestCycle;
-import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
+
+//import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
+//import org.apache.directory.fortress.web.control.WicketSession;
+//import org.apache.wicket.Session;
 
 /**
  * Wicket Sample WebApplication impl.
@@ -26,9 +28,8 @@ import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
  */
 public class WicketApplication extends WebApplication
 {
-
-/*
 	// TODO STEP 7a: uncomment save fortress session to wicket session:
+/*
 	@Override
 	public Session newSession(Request request, Response response)
 	{
