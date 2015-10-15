@@ -16,9 +16,11 @@ import org.apache.wicket.request.Response;
 import org.apache.wicket.request.cycle.AbstractRequestCycleListener;
 import org.apache.wicket.request.cycle.RequestCycle;
 
-//import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
-//import org.apache.directory.fortress.web.control.WicketSession;
-//import org.apache.wicket.Session;
+/*
+import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
+import org.apache.directory.fortress.web.control.WicketSession;
+import org.apache.wicket.Session;
+*/
 
 /**
  * Wicket Sample WebApplication impl.
