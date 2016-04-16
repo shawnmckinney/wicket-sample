@@ -1,6 +1,6 @@
 # wicket-sample README
 
- Last updated: March 15, 2015
+ Last updated: April 16, 2016
 
  This document demonstrates how to obtain, build and deploy the wicket sample without security.
 

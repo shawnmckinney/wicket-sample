@@ -6,18 +6,18 @@
 
     <groupId>org.apache.directory</groupId>
     <artifactId>wicket-sample</artifactId>
-    <version>1.0-RC41-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>war</packaging>
 
     <properties>
-        <wicket.version>6.19.0</wicket.version>
+        <wicket.version>6.22.0</wicket.version>
         <wicket.jquery.version>6.19.0</wicket.jquery.version>
         <ant.version>1.8.1</ant.version>
         <slf4j.version>1.5.11</slf4j.version>
-        <version.slf4j.log4j12>1.7.7</version.slf4j.log4j12>
-        <spring.version>3.2.3.RELEASE</spring.version>
+        <version.slf4j.log4j12>1.7.18</version.slf4j.log4j12>
+        <spring.version>4.2.5.RELEASE</spring.version>
         <version.log4j>1.2.17</version.log4j>
-        <version.junit>4.11</version.junit>
+        <version.junit>4.12</version.junit>
         <javadoc.version>2.9.1</javadoc.version>
         <title>${project.name} ${project.version}</title>
     </properties>
@@ -25,14 +25,12 @@
 
     <dependencies>
         <!-- TODO STEP 3: uncomment for fortress security: -->
-<!--
         <dependency>
             <groupId>org.apache.directory.fortress</groupId>
             <artifactId>fortress-web</artifactId>
             <version>${project.version}</version>
             <classifier>classes</classifier>
         </dependency>
--->
 
         <dependency>
             <groupId>log4j</groupId>
