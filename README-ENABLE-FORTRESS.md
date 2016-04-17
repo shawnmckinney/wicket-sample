@@ -15,8 +15,8 @@
 2. Apache Maven 3++
 3. Apache Tomcat 7++
 4. Completed either section in Apache Fortress Core Quickstart:
-    * *SECTION 3. Apache Fortress Core Integration Test* in [README-QUICKSTART-SLAPD.md](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-SLAPD.md)
-    * *SECTION 4. Apache Fortress Core Integration Test* in [README-QUICKSTART-APACHEDS.md](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md)
+    * *SECTION 4. Apache Tomcat Setup* in [README-QUICKSTART-SLAPD.md](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-SLAPD.md)
+    * *SECTION 5. Apache Tomcat Setup* in [README-QUICKSTART-APACHEDS.md](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md)
 
 -------------------------------------------------------------------------------
 
@@ -172,16 +172,22 @@
 
  This file hooks a web app into the tomcat fortress realm which performs declarative (automatic) security functions like authenticate and isUserInRole.
 
- ####more on the realm:
+8. Download the fortress realm proxy jar into tomcat/lib folder:
 
- The fortress realm proxy jar must be present under tomcat lib folder
+  ```
+  wget http://repo.maven.apache.org/maven2/org/apache/directory/fortress/fortress-realm-proxy/1.0.0/fortress-realm-proxy-1.0.0.jar -P $TOMCAT_HOME/lib
+  ```
 
- The proxy is a shim that uses a [URLClassLoader](http://docs.oracle.com/javase/7/docs/api/java/net/URLClassLoader.html) to reach its implementation libs.  It prevents
+  where *TOMCAT_HOME* matches your target env.
+
+9. Restart tomcat for new settings to take effect.
+
+ Note: The proxy is a shim that uses a [URLClassLoader](http://docs.oracle.com/javase/7/docs/api/java/net/URLClassLoader.html) to reach its implementation libs.  It prevents
  the realm impl libs, pulled in as dependency to web app, from interfering with the container’s system classpath thus providing an error free deployment process free from
  classloader issues.  The proxy offers the flexibility for each web app to determine its own version/type of security realm to use, satisfying a variety of requirements
  related to web hosting and multitenancy.
 
-8. Rename [fortress.properties.example](src/main/resources/fortress.properties.example) to fortress.properties.
+10. Rename [fortress.properties.example](src/main/resources/fortress.properties.example) to fortress.properties.
 
  Pick One:
 
@@ -247,7 +253,7 @@
  ehcache.config.file=ehcache.xml
  ```
 
-9. Edit [WicketApplication.java](src/main/java/org/wicketsample/WicketApplication.java)
+11. Edit [WicketApplication.java](src/main/java/org/wicketsample/WicketApplication.java)
 
  Tell wicket about fortress sessions and objects.
     * uncomment fortress session override
@@ -274,7 +280,7 @@
 
  These steps are necessary to get fortress hooked into the sample app.
 
-10. Edit [WicketSampleBasePage.java](src/main/java/org/wicketsample/WicketSampleBasePage.java)
+12. Edit [WicketSampleBasePage.java](src/main/java/org/wicketsample/WicketSampleBasePage.java)
 
  Get fortress objects injected to the wicket base page, enable fortress secured page links.
     * uncomment fortress spring bean injection
@@ -320,7 +326,7 @@
 
  This component maps a page link to a fortress permission.  The wicket id passed in, e.g. page1.link, is converted to a fortress permission, objName: page1, opName: link.
 
-11. Edit [Page1.java](src/main/java/org/wicketsample/Page1.java), [Page2.java](src/main/java/org/wicketsample/Page2.java), [Page3.java](src/main/java/org/wicketsample/Page3.java)
+13. Edit [Page1.java](src/main/java/org/wicketsample/Page1.java), [Page2.java](src/main/java/org/wicketsample/Page2.java), [Page3.java](src/main/java/org/wicketsample/Page3.java)
 
  Enable fortress secured buttons.  Each page has three buttons.  Same as before, only the name changes.
     * change to FtIndicatingAjaxButton
@@ -332,7 +338,7 @@
 
  This component maps the buttons to fortress permissions.  The wicket id, e.g. page1.button1, is converted to a fortress permission, objName: page1, opName: button1.
 
-10. Build & Deploy (run from the command line):
+14. Build & Deploy (run from the command line):
 
  Deploy to tomcat server:
 
