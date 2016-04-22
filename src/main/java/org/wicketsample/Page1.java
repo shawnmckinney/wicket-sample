@@ -34,7 +34,7 @@ public class Page1 extends WicketSampleBasePage
 
             add( new Label( "label1", "This is Page1" ) );
 
-            // TODO STEP 9a: change to FtIndicatingAjaxButton:
+            // TODO STEP: change to FtIndicatingAjaxButton:
             add( new IndicatingAjaxButton( "page1.button1" )
             {
                 @Override
@@ -44,7 +44,7 @@ public class Page1 extends WicketSampleBasePage
                 }
             } );
 
-            // TODO STEP 9b: change to FtIndicatingAjaxButton:
+            // TODO STEP: change to FtIndicatingAjaxButton:
             add( new IndicatingAjaxButton( "page1.button2" )
             {
                 @Override
@@ -54,7 +54,7 @@ public class Page1 extends WicketSampleBasePage
                 }
             } );
 
-            // TODO STEP 9c: change to FtIndicatingAjaxButton:
+            // TODO STEP: change to FtIndicatingAjaxButton:
             add( new IndicatingAjaxButton( "page1.button3" )
             {
                 @Override

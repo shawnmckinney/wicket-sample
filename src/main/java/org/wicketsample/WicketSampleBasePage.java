@@ -28,7 +28,7 @@ import org.apache.wicket.spring.injection.annot.SpringBean;
  */
 public abstract class WicketSampleBasePage extends WebPage
 {
-    // TODO STEP 8a: enable spring injection of fortress bean here:
+    // TODO STEP: enable spring injection of fortress bean here:
 /*
     @SpringBean
     private AccessMgr accessMgr;
@@ -38,7 +38,7 @@ public abstract class WicketSampleBasePage extends WebPage
 
     public WicketSampleBasePage()
     {
-        // TODO STEP 8b: uncomment call to enableFortress:
+        // TODO STEP: uncomment call to enableFortress:
 /*
         try
         {
@@ -51,7 +51,7 @@ public abstract class WicketSampleBasePage extends WebPage
             LOG.warn( error );
         }
 */
-        // TODO STEP 8c: change to FtBookmarkablePageLink:
+        // TODO STEP: change to FtBookmarkablePageLink:
         add( new BookmarkablePageLink( "page1.link", Page1.class ) );
         add( new BookmarkablePageLink( "page2.link", Page2.class ) );
         add( new BookmarkablePageLink( "page3.link", Page3.class ) );

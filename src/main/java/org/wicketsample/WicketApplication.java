@@ -30,7 +30,7 @@ import org.apache.wicket.Session;
  */
 public class WicketApplication extends WebApplication
 {
-	// TODO STEP 7a: uncomment save fortress session to wicket session:
+	// TODO STEP: uncomment save fortress session to wicket session:
 /*
 	@Override
 	public Session newSession(Request request, Response response)
@@ -46,7 +46,7 @@ public class WicketApplication extends WebApplication
 	{
 		super.init();
 
-		// TODO STEP 7b: uncomment to enable injection of fortress spring beans:
+		// TODO STEP: uncomment to enable injection of fortress spring beans:
 		//getComponentInstantiationListeners().add(new SpringComponentInjector(this));
 
 		// Catch runtime exceptions this way:
