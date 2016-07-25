@@ -1,8 +1,9 @@
 # wicket-sample README
 
- Last updated: April 16, 2016
-
- This document demonstrates how to obtain, build and deploy the wicket sample without security.
+* Last updated: July 25, 2016
+* This document demonstrates how to obtain, build and deploy the Apache Fortress Wicket Sample application.
+* To complete this tutorial, first follow the steps in this README.
+* Followed by the steps here: [README-ENABLE-FORTRESS.md](README-ENABLE-FORTRESS.md)
 
 -------------------------------------------------------------------------------
 ## Prerequisites
