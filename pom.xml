@@ -6,12 +6,12 @@
 
     <groupId>org.apache.directory</groupId>
     <artifactId>wicket-sample</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>war</packaging>
 
     <properties>
-        <wicket.version>6.22.0</wicket.version>
-        <wicket.jquery.version>6.19.0</wicket.jquery.version>
+        <wicket.version>7.3.0</wicket.version>
+        <wicket.jquery.version>7.3.0</wicket.jquery.version>
         <ant.version>1.8.1</ant.version>
         <slf4j.version>1.5.11</slf4j.version>
         <version.slf4j.log4j12>1.7.18</version.slf4j.log4j12>
@@ -50,24 +50,10 @@
             <artifactId>wicket-spring</artifactId>
             <version>${wicket.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.googlecode.wicket-jquery-ui</groupId>
             <artifactId>wicket-jquery-ui</artifactId>
-            <version>${wicket.jquery.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.wicket</groupId>
-            <artifactId>wicket-core</artifactId>
-            <version>${wicket.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.wicket</groupId>
-            <artifactId>wicket-extensions</artifactId>
-            <version>${wicket.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.wicketstuff</groupId>
-            <artifactId>wicketstuff-inmethod-grid</artifactId>
             <version>${wicket.jquery.version}</version>
         </dependency>
 
