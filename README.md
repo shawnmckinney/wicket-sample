@@ -1,13 +1,12 @@
 # wicket-sample README
 
-* Last updated: July 25, 2016
 * This document demonstrates how to obtain, build and deploy the Apache Fortress Wicket Sample application.
 * To complete this tutorial, first follow the steps in this README.
 * Followed by the steps here: [README-ENABLE-FORTRESS.md](README-ENABLE-FORTRESS.md)
 
 -------------------------------------------------------------------------------
 ## Prerequisites
-1. Java 7 (or greater) sdk
+1. Java 8
 2. Apache Maven 3
 3. Apache Tomcat 7 or greater
 

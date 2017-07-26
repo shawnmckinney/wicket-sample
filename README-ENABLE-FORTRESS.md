@@ -11,10 +11,10 @@
 -------------------------------------------------------------------------------
 
 ## Prerequisites
-1. Java 7++
+1. Java 8
 2. Apache Maven 3++
 3. Apache Tomcat 7++
-4. Completed either section in Apache Fortress Core Quickstart:
+4. Completed section in Apache Fortress Core Quickstart:
     * *SECTION 4. Apache Tomcat Setup* in [README-QUICKSTART-SLAPD.md](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-SLAPD.md)
     * *SECTION 5. Apache Tomcat Setup* in [README-QUICKSTART-APACHEDS.md](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md)
 
