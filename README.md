@@ -20,7 +20,24 @@
 
 4. Set java and maven home env variables.
 
-5. Run this command from the root package:
+5. Prepare tomcat to allow autodeploy of wicketsample web app:
+
+ ```
+ sudo vi /usr/local/tomcat8/conf/tomcat-users.xml
+ ```
+
+6. Add tomcat user to deploy wicketsample:
+
+ ```
+ <role rolename="manager-script"/>
+ <role rolename="manager-gui"/>
+ <user username="tcmanager" password="m@nager123" roles="manager-script"/>
+ <user username="tcmanagergui" password="m@nager123" roles="manager-gui"/>
+ ```
+
+7. Save and exit tomcat-users.xml file
+
+8. Run this command from the root package:
 ```
 mvn clean tomcat:deploy
 ```
