@@ -30,9 +30,7 @@
 
  ```
  <role rolename="manager-script"/>
- <role rolename="manager-gui"/>
  <user username="tcmanager" password="m@nager123" roles="manager-script"/>
- <user username="tcmanagergui" password="m@nager123" roles="manager-gui"/>
  ```
 
 7. Save and exit tomcat-users.xml file and restart tomcat.
