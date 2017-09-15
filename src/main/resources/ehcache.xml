@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-  ~ Copyright (c) 2013, JoshuaTree Software. All rights reserved.
+  ~ This is free and unencumbered software released into the public domain.
   -->
 
 <!--
@@ -9,7 +9,7 @@ Fortress CacheManager Configuration
 ==========================
 This ehcache.xml corresponds to a single CacheManager.
 -->
-<ehcache name="fortress-demo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ehcache name="wicket-sample" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="ehcache.xsd"
          updateCheck="true" monitoring="autodetect"
          dynamicConfig="true"
