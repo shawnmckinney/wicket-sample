@@ -456,7 +456,7 @@ Below is the list of permissions by user.  These list can be returned using [ses
 
 ## Enable Java Security Manager (Optional)
 
-Add to java policy file:
+1. Add to java policy file:
 
  ```
  grant codeBase "file:${catalina.home}/webapps/wicket-sample/-" {
@@ -479,4 +479,12 @@ Add to java policy file:
     permission java.net.SocketPermission "127.0.0.1:32768", "connect,resolve";
     permission  java.lang.reflect.ReflectPermission "suppressAccessChecks";
     permission java.io.SerializablePermission "enableSubclassImplementation";
+ ```
+
+ 2. Modify Tomcat server.xml:
+
+  ```
+   <Host name="localhost"  appBase="webapps"
+    unpackWARs="true" autoDeploy="true"
+    deployXML="true">                            <--- Add this declaration
  ```
