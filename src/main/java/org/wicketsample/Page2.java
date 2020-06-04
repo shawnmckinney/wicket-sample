@@ -40,7 +40,7 @@ public class Page2 extends WicketSampleBasePage
             add( new IndicatingAjaxButton( "page2.button1" )
             {
                 @Override
-                protected void onSubmit( AjaxRequestTarget target, Form form )
+                protected void onSubmit( AjaxRequestTarget target )
                 {
                     logIt( target, "Page 2, Button 1 Pressed" );
                 }
@@ -50,7 +50,7 @@ public class Page2 extends WicketSampleBasePage
             add( new IndicatingAjaxButton( "page2.button2" )
             {
                 @Override
-                protected void onSubmit( AjaxRequestTarget target, Form form )
+                protected void onSubmit( AjaxRequestTarget target )
                 {
                     logIt( target, "Page 2, Button 2 Pressed" );
                 }
@@ -60,7 +60,7 @@ public class Page2 extends WicketSampleBasePage
             add( new IndicatingAjaxButton( "page2.button3" )
             {
                 @Override
-                protected void onSubmit( AjaxRequestTarget target, Form form )
+                protected void onSubmit( AjaxRequestTarget target )
                 {
                     logIt( target, "Page 2, Button 3 Pressed" );
                 }
