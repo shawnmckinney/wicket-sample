@@ -17,6 +17,7 @@
 
     <dependencies>
         <!-- TODO STEP 3: uncomment for fortress security: -->
+        <!--  Apache Fortress Web pulls in its Core and Realm libs, plus Apache Wicket, Spring, jaxb and some others -->
         <dependency>
             <groupId>org.apache.directory.fortress</groupId>
             <artifactId>fortress-web</artifactId>
