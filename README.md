@@ -11,31 +11,42 @@
 3. Apache Tomcat 8++
 
 -------------------------------------------------------------------------------
-## How to build and deploy
-1. [Download ZIP](https://github.com/shawnmckinney/wicket-sample/archive/master.zip)
+1. Stage the project source:
 
-2. Extract the zip archive to your local machine.
+ a. Download and extract from Github:
 
-3. cd wicket-sample-master
+ ```bash
+ wget https://github.com/shawnmckinney/wicket-sample/archive/master.zip
+ ```
 
-4. Set java and maven home env variables.
+ -- Or --
 
-5. Prepare tomcat to allow autodeploy of wicketsample web app:
+ b. Or `git clone` locally:
+
+ ```git
+ git clone https://github.com/shawnmckinney/wicket-sample.git
+ ```
+
+2. cd wicket-sample
+
+3. Set java and maven home env variables.
+
+4. Prepare tomcat to allow autodeploy of wicketsample web app:
 
  ```
  sudo vi /usr/local/tomcat8/conf/tomcat-users.xml
  ```
 
-6. Add tomcat user to deploy wicketsample:
+5. Add tomcat user to deploy wicketsample:
 
  ```
  <role rolename="manager-script"/>
  <user username="tcmanager" password="m@nager123" roles="manager-script"/>
  ```
 
-7. Save and exit tomcat-users.xml file and restart tomcat.
+6. Save and exit tomcat-users.xml file and restart tomcat.
 
-8. Run this command from the root package:
+7. Run this command from the root package:
 ```
 mvn clean tomcat:deploy
 ```
