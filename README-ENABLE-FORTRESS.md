@@ -11,7 +11,7 @@
 -------------------------------------------------------------------------------
 
 ## Prerequisites
-1. Java 8
+1. Java 8++
 2. Apache Maven 3++
 3. Apache Tomcat 8++
 4. Completed section in Apache Fortress Core Quickstart:

@@ -6,9 +6,9 @@
 
 -------------------------------------------------------------------------------
 ## Prerequisites
-1. Java 8
-2. Apache Maven 3
-3. Apache Tomcat 7 or greater
+1. Java 8++
+2. Apache Maven 3++
+3. Apache Tomcat 8++
 
 -------------------------------------------------------------------------------
 ## How to build and deploy
