@@ -3,7 +3,7 @@
  * This document demonstrates how to enable java EE and fortress security for the wicket sample app.
  * The intent is to demonstrate how to combine Apache Fortress RBAC into an Apache Wicket web app.
  * The intent is not a how-to guide for fortress security in java web envs.  For that look to [apache-fortress-demo](https://github.com/shawnmckinney/apache-fortress-demo)
- * For more info about the wicket sample: [Link to Wicket Blog](https://iamfortress.net/2015/03/05/the-seven-steps-of-role-engineering/)
+ * For more info about applying RBAC controls: [the-seven-steps-of-role-engineering](https://iamfortress.net/2015/03/05/the-seven-steps-of-role-engineering/)
  * Wicket Sample System Diagram
  ![System Diagram](src/main/javadoc/doc-files/Wicket-Sample-Block-Diagram-Master.png "System Diagram")
 
@@ -14,10 +14,11 @@
 1. Java 8++
 2. Apache Maven 3++
 3. Apache Tomcat 8++
-4. Completed section in Apache Fortress Core Quickstart:
-    * *SECTION 4. Apache Tomcat Setup* in [README-QUICKSTART-SLAPD.md](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-SLAPD.md)
-    * *SECTION 5. Apache Tomcat Setup* in [README-QUICKSTART-APACHEDS.md](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md)
-
+4. Basic LDAP server setup by completing one of these:
+    * [OpenLDAP & Fortress QUICKSTART](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-SLAPD.md)
+    * [OpenLDAP & Fortress QUICKSTART on DOCKER](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-DOCKER-SLAPD.md)
+    * [APACHEDS & Fortress QUICKSTART](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md)    
+    * [APACHEDS & Fortress QUICKSTART on DOCKER](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-DOCKER-APACHEDS.md)
 -------------------------------------------------------------------------------
 
 ## How to enable security in this wicket app
