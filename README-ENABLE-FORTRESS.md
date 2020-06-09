@@ -56,7 +56,7 @@
 
   ```xml
         ...
-        <!-- TODO STEP 3: uncomment for fortress security dependency: -->
+        <!-- TODO STEP: uncomment for fortress security dependency: -->
         <dependency>
             <groupId>org.apache.directory</groupId>
             <artifactId>fortress-web</artifactId>
@@ -73,7 +73,7 @@
   * uncomment the spring settings
 
  ```xml
-  <!-- TODO STEP 4a: uncomment to enable fortress spring bean injection: -->
+  <!-- TODO STEP: uncomment to enable fortress spring bean injection: -->
   <context-param>
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath:applicationContext.xml</param-value>
@@ -113,7 +113,7 @@
 
  ```xml
     ...
-    <!-- TODO STEP 4b: uncomment to enable Java EE Security -->
+    <!-- TODO STEP: uncomment to enable Java EE Security -->
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>app</web-resource-name>
@@ -196,20 +196,6 @@
  # These credentials are used for read/write access to all nodes under suffix:
  admin.user=uid=admin,ou=system
  admin.pw=secret
-
- # This is min/max settings for LDAP administrator pool connections that have read/write access to all nodes under suffix:
- min.admin.conn=1
- max.admin.conn=10
-
- # This node contains fortress properties stored on behalf of connecting LDAP clients:
- config.realm=DEFAULT
- config.root=ou=Config,dc=example,dc=com
-
- # Used by application security components:
- perms.cached=true
-
- # Fortress uses a cache:
- ehcache.config.file=ehcache.xml
  ```
 
  b. Prepare fortress for openldap usage:
@@ -227,20 +213,6 @@
  # These credentials are used for read/write access to all nodes under suffix:
  admin.user=cn=Manager,dc=example,dc=com
  admin.pw=secret
-
- # This is min/max settings for LDAP administrator pool connections that have read/write access to all nodes under suffix:
- min.admin.conn=1
- max.admin.conn=10
-
- # This node contains fortress properties stored on behalf of connecting LDAP clients:
- config.realm=DEFAULT
- config.root=ou=Config,dc=example,dc=com
-
- # Used by application security components:
- perms.cached=true
-
- # Fortress uses a cache:
- ehcache.config.file=ehcache.xml
  ```
 
 9. Edit [WicketApplication.java](src/main/java/org/wicketsample/WicketApplication.java)
@@ -251,7 +223,7 @@
  Here we override app’s wicket session with a new one that can hold onto fortress session and perms:
 
  ```java
-	// TODO STEP 7a: uncomment save fortress session to wicket session:
+	// TODO STEP: uncomment save fortress session to wicket session:
 	@Override
 	public Session newSession(Request request, Response response)
 	{
@@ -264,7 +236,7 @@
  Next we tell the app to use spring to inject references to fortress security objects:
 
  ```java
-    // TODO STEP 7b: uncomment to enable injection of fortress spring beans:
+    // TODO STEP: uncomment to enable injection of fortress spring beans:
     getComponentInstantiationListeners().add(new SpringComponentInjector(this));
  ```
 
@@ -276,7 +248,7 @@
     * uncomment fortress spring bean injection
 
  ```java
-    // TODO STEP 8a: enable spring injection of fortress bean here:
+    // TODO STEP: enable spring injection of fortress bean here:
     @SpringBean
     private AccessMgr accessMgr;
 
@@ -292,7 +264,7 @@
  This performs the boilerplate security functions required by fortress during app session startup:
 
  ```java
- // TODO STEP 8b: uncomment call to enableFortress:
+ // TODO STEP: uncomment call to enableFortress:
  try
  {
      SecUtils.enableFortress( this, ( HttpServletRequest ) getRequest().getContainerRequest(), j2eePolicyMgr, accessMgr );
@@ -308,7 +280,7 @@
  The advantage here is other than a name change, everything else stays the same, and now the links are secured.
 
  ```java
- // TODO STEP 8c: change to FtBookmarkablePageLink:
+ // TODO STEP: change to FtBookmarkablePageLink:
  add( new FtBookmarkablePageLink( "page1.link", Page1.class ) );
  add( new FtBookmarkablePageLink( "page2.link", Page2.class ) );
  add( new FtBookmarkablePageLink( "page3.link", Page3.class ) );
@@ -322,7 +294,7 @@
     * change to FtIndicatingAjaxButton
 
  ```java
- // TODO STEP 9a: change to FtIndicatingAjaxButton:
+ // TODO STEP: change to FtIndicatingAjaxButton:
  add( new FtIndicatingAjaxButton( "page1.button1" )
  ```
 
@@ -354,7 +326,7 @@
 
 ## Understand the security policy using RBAC
 
-To gain full understanding, check out the file used to load it into the LDAP directory: ![wicket-sample security policy](wicket-sample-security-policy.xml).
+To gain full understanding, check out the file used to load it into the LDAP directory: ![wicket-sample security policy](./wicket-sample-security-policy.xml).
 
 App comprised of three pages, each has buttons and links that are guarded by permissions.  The permissions are granted to a particular user via their role assignments.
 
