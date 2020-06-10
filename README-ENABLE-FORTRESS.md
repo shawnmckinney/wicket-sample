@@ -7,7 +7,6 @@
  * Wicket Sample System Diagram
  ![System Diagram](src/main/javadoc/doc-files/Wicket-Sample-Block-Diagram-Master.png "System Diagram")
 
-
 -------------------------------------------------------------------------------
 
 ## Prerequisites
@@ -461,3 +460,28 @@ Below is the list of permissions by user.  These list can be returned using [ses
     unpackWARs="true" autoDeploy="true"
     deployXML="true">                            <--- Add this declaration
  ```
+
+## Troubleshooting
+
+1. Can't login with a valid user.
+
+Was the fortress load step run?
+
+```java
+mvn install -Dload.file
+``` 
+ 
+2. Can login to sample, but no links or buttons are displayed on the landing page.
+
+Has another fortress sample app been tested?  It's possible that the permission grants were overridden by that other sample in which case run this sample's load again.
+
+3. Some other unidentified error.  View the Tomcat logs to get more clues.
+
+Change the granularity of the loggers in [log4j.properties](src/main/resources/log4j.properties) and redeploy.
+
+```java
+log4j.logger.org.wicketsample=DEBUG
+log4j.logger.org.apache.directory.fortress.web=DEBUG
+log4j.logger.org.apache.directory.fortress.core=DEBUG
+log4j.logger.org.apache.directory.fortress.realm=DEBUG
+```

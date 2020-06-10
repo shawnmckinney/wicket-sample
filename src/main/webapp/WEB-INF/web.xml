@@ -26,7 +26,7 @@
     </filter-mapping>
 
 
-    <!-- TODO STEP 4a: uncomment to enable fortress spring bean injection && Java EE Security: -->
+    <!-- TODO STEP: uncomment to enable fortress spring bean injection && Java EE Security: -->
 <!--
     <context-param>
         <param-name>contextConfigLocation</param-name>
