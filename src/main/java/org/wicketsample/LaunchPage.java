@@ -4,7 +4,8 @@
 package org.wicketsample;
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.wicket.markup.html.basic.Label;
 
 /**
@@ -15,7 +16,7 @@ import org.apache.wicket.markup.html.basic.Label;
  */
 public class LaunchPage extends WicketSampleBasePage
 {
-    private static final Logger LOG = Logger.getLogger( LaunchPage.class.getName() );
+    private static final Logger LOG = LoggerFactory.getLogger( LaunchPage.class.getName() );
     public LaunchPage()
     {
         add(new Label("label1", "You have access to the link(s) above."));

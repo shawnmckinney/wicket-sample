@@ -477,11 +477,15 @@ Has another fortress sample app been tested?  It's possible that the permission 
 
 3. Some other unidentified error.  View the Tomcat logs to get more clues.
 
-Change the granularity of the loggers in [log4j.properties](src/main/resources/log4j.properties) and redeploy.
+Change the granularity of the loggers in [log4j2.xml](src/main/resources/log4j2.xml) and redeploy.
 
-```java
-log4j.logger.org.wicketsample=DEBUG
-log4j.logger.org.apache.directory.fortress.web=DEBUG
-log4j.logger.org.apache.directory.fortress.core=DEBUG
-log4j.logger.org.apache.directory.fortress.realm=DEBUG
+```xml
+<Logger name="org.apache.directory.fortress.realm" level="info"/>
+<Logger name="org.apache.directory.fortress.core" level="info"/>
+<Logger name="org.apache.directory.fortress.web" level="info"/>
+<Logger name="org.apache.wicket" level="info"/>
+<Logger name="org.apache.wicket.protocol.http.HttpSessionStore" level="info"/>
+<Logger name="org.apache.wicket.version" level="info"/>
+<Logger name="org.apache.wicket.RequestCycle" level="info"/>
+<Logger name="org.wicketsample" level="debug"/>
 ```

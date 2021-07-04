@@ -3,7 +3,8 @@
  */
 package org.wicketsample;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
@@ -80,5 +81,5 @@ public abstract class WicketSampleBasePage extends WebPage
         target.appendJavaScript(";alert('" + msg + "');");
     }
 
-    protected static final Logger LOG = Logger.getLogger( WicketSampleBasePage.class.getName() );
+    protected static final Logger LOG = LoggerFactory.getLogger( WicketSampleBasePage.class.getName() );
 }
