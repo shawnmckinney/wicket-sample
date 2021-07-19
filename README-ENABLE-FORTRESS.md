@@ -281,9 +281,9 @@
 
  ```java
  // TODO STEP: change to FtBookmarkablePageLink:
- add( new FtBookmarkablePageLink( "page1.link", Page1.class ) );
- add( new FtBookmarkablePageLink( "page2.link", Page2.class ) );
- add( new FtBookmarkablePageLink( "page3.link", Page3.class ) );
+ add( new FtBookmarkablePageLink( "wspage1.link", Page1.class ) );
+ add( new FtBookmarkablePageLink( "wspage2.link", Page2.class ) );
+ add( new FtBookmarkablePageLink( "wspage3.link", Page3.class ) );
  ```
 
  This component maps a page link to a fortress permission.  The wicket id passed in, e.g. page1.link, is converted to a fortress permission, objName: page1, opName: link.
@@ -295,7 +295,7 @@
 
  ```java
  // TODO STEP: change to FtIndicatingAjaxButton:
- add( new FtIndicatingAjaxButton( "page1.button1" )
+ add( new FtIndicatingAjaxButton( "wspage1.button1" )
  ```
 
  This component maps the buttons to fortress permissions.  The wicket id, e.g. page1.button1, is converted to a fortress permission, objName: page1, opName: button1.
@@ -378,20 +378,20 @@ Below is the list of permissions by user.  These list can be returned using [ses
 
 ### User-to-Permission Access Table
 
-| permission    | wsuser1     | wsuser2     | wsuser3     | wssuperuser |
-| ------------- | ----------- | ----------- | ----------- | ----------- |
-| Page1.link    | true        | false       | false       | true        |
-| Page2.link    | false       | true        | false       | true        |
-| Page3.link    | false       | false       | truev       | true        |
-| Page1.Button1 | true        | false       | false       | true        |
-| Page1.Button2 | true        | false       | false       | true        |
-| Page1.Button3 | true        | false       | false       | true        |
-| Page2.Button1 | false       | true        | false       | true        |
-| Page2.Button2 | false       | true        | false       | true        |
-| Page2.Button3 | false       | true        | false       | true        |
-| Page3.Button1 | false       | false       | true        | true        |
-| Page3.Button2 | false       | false       | true        | true        |
-| Page3.Button3 | false       | false       | true        | true        |
+| permission      | wsuser1     | wsuser2     | wsuser3     | wssuperuser |
+| --------------- | ----------- | ----------- | ----------- | ----------- |
+| WsPage1.link    | true        | false       | false       | true        |
+| WsPage2.link    | false       | true        | false       | true        |
+| WsPage3.link    | false       | false       | truev       | true        |
+| WsPage1.Button1 | true        | false       | false       | true        |
+| WsPage1.Button2 | true        | false       | false       | true        |
+| WsPage1.Button3 | true        | false       | false       | true        |
+| WsPage2.Button1 | false       | true        | false       | true        |
+| WsPage2.Button2 | false       | true        | false       | true        |
+| WsPage2.Button3 | false       | true        | false       | true        |
+| WsPage3.Button1 | false       | false       | true        | true        |
+| WsPage3.Button2 | false       | false       | true        | true        |
+| WsPage3.Button3 | false       | false       | true        | true        |
 
 
 ## How to test with security enabled
