@@ -10,7 +10,7 @@
 -------------------------------------------------------------------------------
 
 ## Prerequisites
-1. Java >= 8
+1. Java >= 11
 2. Apache >= Maven 3
 3. Apache Tomcat >= 8
 4. Basic LDAP server setup by completing one of these:
@@ -18,6 +18,8 @@
     * [OpenLDAP & Fortress QUICKSTART on DOCKER](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-DOCKER-SLAPD.md)
     * [APACHEDS & Fortress QUICKSTART](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md)    
     * [APACHEDS & Fortress QUICKSTART on DOCKER](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-DOCKER-APACHEDS.md)
+    * [ansible-apache-fortress](https://gitlab.symas.net/symas-public/ansible-apache-fortress)
+   
 -------------------------------------------------------------------------------
 
 ## How to enable security in this wicket app
@@ -27,7 +29,7 @@
 2. Download the fortress realm proxy jar into tomcat/lib folder:
 
  ```
- wget https://repo.maven.apache.org/maven2/org/apache/directory/fortress/fortress-realm-proxy/2.0.7/fortress-realm-proxy-2.0.7.jar -P $TOMCAT_HOME/lib
+ wget https://repo.maven.apache.org/maven2/org/apache/directory/fortress/fortress-realm-proxy/2.0.8/fortress-realm-proxy-2.0.8.jar -P $TOMCAT_HOME/lib
  ```
 
  where *TOMCAT_HOME* matches your target env.
@@ -177,11 +179,23 @@
 
  This file hooks a web app into the tomcat fortress realm which performs declarative (automatic) security functions like authenticate and isUserInRole.
 
-8. Rename [fortress.properties.example](src/main/resources/fortress.properties.example) to fortress.properties.
+8. Copy [fortress.properties.example](src/main/resources/fortress.properties.example) to fortress.properties.
+
+ a. Copy the example:
+
+ ```bash
+ cp src/main/resources/fortress.properties.example src/main/resources/fortress.properties
+ ```
+
+ b. Edit the file:
+
+ ```bash
+ vi src/main/resources/fortress.properties
+ ```
 
  Pick One:
 
- a. Prepare fortress for apacheds usage:
+ v. Prepare fortress for apacheds usage:
 
  ```properties
  # This param tells fortress what type of ldap server in use:
@@ -198,7 +212,7 @@
  admin.pw=secret
  ```
 
- b. Prepare fortress for openldap usage:
+ d. Prepare fortress for openldap usage:
 
  ```properties
  # This param tells fortress what type of ldap server in use:
