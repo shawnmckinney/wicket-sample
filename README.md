@@ -15,17 +15,17 @@
 
  a. Download and extract from Github:
 
- ```bash
- wget https://github.com/shawnmckinney/wicket-sample/archive/master.zip
- ```
+```bash
+wget https://github.com/shawnmckinney/wicket-sample/archive/master.zip
+```
 
  -- Or --
 
  b. Or `git clone` locally:
 
- ```git
- git clone https://github.com/shawnmckinney/wicket-sample.git
- ```
+```git
+git clone https://github.com/shawnmckinney/wicket-sample.git
+```
 
 2. cd wicket-sample
 
@@ -33,20 +33,21 @@
 
 4. Prepare tomcat to allow autodeploy of wicketsample web app:
 
- ```
- sudo vi /usr/local/tomcat8/conf/tomcat-users.xml
- ```
+```
+sudo vi /usr/local/tomcat8/conf/tomcat-users.xml
+```
 
 5. Add tomcat user to deploy wicketsample:
 
- ```
- <role rolename="manager-script"/>
- <user username="tcmanager" password="m@nager123" roles="manager-script"/>
- ```
+```
+<role rolename="manager-script"/>
+<user username="tcmanager" password="m@nager123" roles="manager-script"/>
+```
 
 6. Save and exit tomcat-users.xml file and restart tomcat.
 
 7. Run this command from the root package:
+
 ```
 mvn clean tomcat:deploy
 ```
