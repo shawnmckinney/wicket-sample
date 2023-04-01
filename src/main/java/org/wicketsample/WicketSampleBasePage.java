@@ -1,5 +1,5 @@
 /*
- * This is free and unencumbered software released into the public domain.
+ * © 2023 iamfortress.net
  */
 package org.wicketsample;
 
@@ -65,7 +65,7 @@ public abstract class WicketSampleBasePage extends WebPage
             }
         };
         add( actionLink );
-        add( new Label( "footer", "This is free and unencumbered software released into the public domain." ) );
+        add( new Label( "footer", "© 2023 iamfortress.net" ) );
     }
 
     /**

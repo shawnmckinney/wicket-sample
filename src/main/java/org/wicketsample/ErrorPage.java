@@ -1,5 +1,5 @@
 /*
- * This is free and unencumbered software released into the public domain.
+ * © 2023 iamfortress.net© 2023 iamfortress.net
  */
 package org.wicketsample;
 
