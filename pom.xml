@@ -9,7 +9,7 @@
 
     <groupId>org.apache.directory</groupId>
     <artifactId>wicket-sample</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <version>3.0.0</version>
     <packaging>war</packaging>
 
     <properties>
@@ -20,8 +20,8 @@
     </properties>
 
     <dependencies>
-        <!-- TODO STEP 3: uncomment for fortress security: -->
         <!--  Apache Fortress Web pulls in its Core and Realm libs, plus Apache Wicket, Spring, jaxb and some others -->
+        <!-- TODO STEP 3: uncomment for fortress security: -->
         <dependency>
             <groupId>org.apache.directory.fortress</groupId>
             <artifactId>fortress-web</artifactId>
