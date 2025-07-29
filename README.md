@@ -1,4 +1,4 @@
-© 2023 iamfortress.net
+© 2025 iamfortress.net
 # wicket-sample README
 
 * This document demonstrates how to obtain, build and deploy the Apache Fortress Wicket Sample application.

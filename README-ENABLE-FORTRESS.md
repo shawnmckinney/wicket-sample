@@ -1,4 +1,4 @@
-© 2023 iamfortress.net
+© 2025 iamfortress.net
 # Overview of the wicket-sample README-ENABLE-FORTRESS README
 
  * This document demonstrates how to enable java EE and fortress security for the wicket sample app.

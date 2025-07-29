@@ -1,5 +1,5 @@
 /*
- * © 2023 iamfortress.net
+ * © 2025 iamfortress.net
  */
 package org.wicketsample;
 
@@ -65,7 +65,7 @@ public abstract class WicketSampleBasePage extends WebPage
             }
         };
         add( actionLink );
-        add( new Label( "footer", "© 2023 iamfortress.net" ) );
+        add( new Label( "footer", "© 2025 iamfortress.net" ) );
     }
 
     /**
